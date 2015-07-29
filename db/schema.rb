@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150728204801) do
+ActiveRecord::Schema.define(version: 20150729195352) do
 
   create_table "authentications", force: :cascade do |t|
     t.integer  "user_id",    null: false
@@ -22,6 +22,46 @@ ActiveRecord::Schema.define(version: 20150728204801) do
   end
 
   add_index "authentications", ["provider", "uid"], name: "index_authentications_on_provider_and_uid"
+
+  create_table "initiatives", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "owner_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "interests", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "tag_id"
+    t.integer  "score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string   "name"
+    t.string   "city"
+    t.text     "description"
+    t.integer  "initiative_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "survey_images", force: :cascade do |t|
+    t.string   "img_url"
+    t.integer  "tag_id"
+    t.integer  "score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string   "name"
+    t.string   "category"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "first_name",                      null: false

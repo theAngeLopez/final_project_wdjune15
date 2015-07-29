@@ -1,0 +1,2 @@
+module SurveyImagesHelper
+end
