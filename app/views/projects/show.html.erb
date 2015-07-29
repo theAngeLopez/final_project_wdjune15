@@ -1,2 +1,17 @@
-<h1>Projects#show</h1>
-<p>Find me in app/views/projects/show.html.erb</p>
+<section class="project-details">
+  <%= image_tag @picture.url %>
+
+  <h3><%= @project.name %></h3>
+  <p><strong>City: </strong><%= @project.city %></p>
+  <p><strong>Description: </strong><%= @project.description %></p>
+
+ 
+<div class="clear"></div>
+</section>
+
+
+<% if current_user %>
+  <h4>Get in touch today with <%= @project.name %></h4>
+  <%= form_for [@project] do |f| %>
+    <%= f.submit %>
+  <% end %>
