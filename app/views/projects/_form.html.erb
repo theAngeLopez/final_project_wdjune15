@@ -1,0 +1,39 @@
+<%= form_for [@initiative, @project] do |f| %>
+
+    <div class="field">
+      <%= f.label :name %> 
+      <%= f.text_field :name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :city %> 
+      <%= f.text_field :city %>
+    </div>
+
+    <div class="field">
+      <%= f.label :description %> 
+      <%= f.text_area :description %>
+    </div>
+
+<h4> Contact Information </h4>
+
+    <div class="field">
+      <%= f.label :contact_name %> 
+      <%= f.text_field :contact_name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :email %> 
+      <%= f.text_field :email %>
+    </div>
+
+    <div class="field">
+      <%= f.label :phone_number %> 
+      <%= f.text_field :phone_number %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+
+<% end %>
