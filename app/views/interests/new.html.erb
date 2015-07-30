@@ -1,2 +1,7 @@
-<h1>Interests#new</h1>
-<p>Find me in app/views/interests/new.html.erb</p>
+<h1>New/Update Interest Test</h1>
+
+<%= form_for [@user, @interest] do |f| %>
+<%= f.hidden_field :tag_id,  %>
+<%= f.hidden_field :score,  %>
+
+<%=  f.submit value="" %>

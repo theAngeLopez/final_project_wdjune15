@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150728212420) do
+=======
+ActiveRecord::Schema.define(version: 20150729195352) do
+>>>>>>> 5bf7f21f47f9117849bd7c28978ff2758bba6e2a
 
   create_table "authentications", force: :cascade do |t|
     t.integer  "user_id",    null: false
@@ -48,9 +52,23 @@ ActiveRecord::Schema.define(version: 20150728212420) do
     t.datetime "updated_at",    null: false
   end
 
+<<<<<<< HEAD
   create_table "tags", force: :cascade do |t|
     t.string   "name"
     t.string   "type"
+=======
+  create_table "survey_images", force: :cascade do |t|
+    t.string   "img_url"
+    t.integer  "tag_id"
+    t.integer  "score"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string   "name"
+    t.string   "category"
+>>>>>>> 5bf7f21f47f9117849bd7c28978ff2758bba6e2a
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
