@@ -11,7 +11,9 @@ Rails.application.routes.draw do
 
   resources :tags, only: [:new, :create]
   resources :projects
-  resources :initiatives
+  resources :initiatives do
+    resources :projects
+  end
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -5,7 +5,12 @@
 
 <%= @initiative.description %>
 
+
 <% @initiative.projects.each do |project| %>
-  <%= project.name %>
-  <%= project.description %>
+<div id="projects_show">
+   <%= render 'projectspartial', p: project %>
+</div>
 <% end %>
+
+
+<%= link_to('New Project' , new_initiative_project_path(@initiative)) %>

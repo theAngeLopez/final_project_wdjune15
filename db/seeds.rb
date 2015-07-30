@@ -5,3 +5,23 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Project.create!(
+  :name => "One",
+  :description => "2dashkldsajkldjsalkdjsalkdjakldjsalkdjaslkdjsakldjsalkdjsakljdlkasjdla",
+  )
+
+Project.create!(
+  :name => "One",
+  :description => "2dashkldsajkldjsalkdjsalkdjakldjsalkdjaslkdjsakldjsalkdjsakljdlkasjdla",
+  )
+
+Project.create!(
+  :name => "One",
+  :description => "2dashkldsajkldjsalkdjsalkdjakldjsalkdjaslkdjsakldjsalkdjsakljdlkasjdla",
+  )
+
+Project.create!(
+  :name => "One",
+  :description => "2dashkldsajkldjsalkdjsalkdjakldjsalkdjaslkdjsakldjsalkdjsakljdlkasjdla",
+  )
