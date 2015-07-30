@@ -7,7 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="nav">
+  <div class="bs-component">
+    <%= link_to "Initiatives", initiatives_url %>
+    <%= link_to "Projects", projects_url %>
     <% if current_user %>
       <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
       <%= link_to "Logout", :logout, method: :post %>
@@ -24,3 +26,4 @@
 
 </body>
 </html>
+

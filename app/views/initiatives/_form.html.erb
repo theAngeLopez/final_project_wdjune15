@@ -1,23 +1,26 @@
 <%= form_for @initiative, html: { multipart: true } do |f| %>
-<div class="field">
+<div class="form-group">
   <%= f.label :name %><br>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, :class => "form-control"   %>
 </div>
 
-<div class="field">
+<div class="form-group">
   <%= f.label :description %><br>
-  <%= f.text_area :description %>
+  <%= f.text_area :description, :class => "form-control"  %>
 </div>
 
-<div class="field">
+<div class="form-group">
   <%= f.label :image %> <br>
-  <%= f.file_field :image %> 
+  <%= f.file_field :image, :class => "form-control"  %> 
 </div>
 
 <br>
 
 <div class="actions">
-  <%= f.submit %>
+  <%= f.submit :class => "btn btn-default"  %>
 </div>
 
 <% end %>
+
+
+
