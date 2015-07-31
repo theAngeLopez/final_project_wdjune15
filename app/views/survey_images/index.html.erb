@@ -1,0 +1,12 @@
+<h1>Select one of the images below:</h1>
+
+<% @images.each do |i| %>
+
+  <%= form_for [@user, @interest] do |f| %>
+
+    <%= f.hidden_field :tag_id, :value => i.tag_id %>
+    <%= f.hidden_field :score, :value => i.score %>
+
+    <p><%= submit_image_tag(i.img_url) %></p>
+  <% end %>
+<% end %>

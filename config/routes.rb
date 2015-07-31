@@ -3,15 +3,19 @@ Rails.application.routes.draw do
   # root :to => '#homepagegoeshere'
   resources :user_sessions
   resources :users do
-    resource :interests, only: [:new, :create]
+    resource :interests, only: [:new, :create] do
+      resources :survey_images
+    end
   end
 
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
 
-  resource :tags, only: [:new, :create]
-  resource :projects
-  resource :initiatives
+  resources :tags, only: [:new, :create]
+  resources :projects
+  resources :initiatives
+
+  get 'survey_images/ask' => 'survey_images#key'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
