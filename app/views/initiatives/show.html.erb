@@ -1,2 +1,17 @@
-<h1>Initiatives#show</h1>
-<p>Find me in app/views/initiatives/show.html.erb</p>
+<h1>Initiative: </h1> <h1> <%= @initiative.name %> </h1>
+<div class="banner">
+  <%= image_tag image_path(@initiative.image.url(:banner))%>
+</div>
+
+<%= @initiative.description %>
+
+
+<% @initiative.projects.each do |project| %>
+<div id="projects_show">
+   <%= render 'projectspartial', p: project %>
+</div>
+<% end %>
+
+  <% if current_user && @initiative.owner_id == current_user.id %>
+      <%= link_to('New Project' , new_initiative_project_path(@initiative)) %>
+    <% end %>

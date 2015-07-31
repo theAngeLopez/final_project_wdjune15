@@ -1,0 +1,8 @@
+<%= link_to "New Initiative", "/initiatives/new" %> <br>
+
+<h1> ALL INITIATIVES!!</h1>
+
+<% @initiatives.each do |initiative| %>
+<%=link_to initiative.name, initiative_path(initiative.id) %> <br>
+<%=link_to image_tag(image_path(initiative.image.url(:small))), "/initiatives/#{initiative.id}" %> 
+<% end %>

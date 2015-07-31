@@ -31,3 +31,24 @@ SurveyImage.create(img_url:"WATER3_500.jpg", tag_id: water.id, score: 5)
 SurveyImage.create(img_url:"EDU1_500.jpg", tag_id: edu.id, score: 5)
 SurveyImage.create(img_url:"EDU2_500.jpg", tag_id: edu.id, score: 5)
 SurveyImage.create(img_url:"EDU3_500.jpg", tag_id: edu.id, score: 5)
+
+
+Project.create!(
+  :name => "One",
+  :description => "Test 1 - Turles",
+  )
+
+Project.create!(
+  :name => "Two",
+  :description => "Test 2 - Drones",
+  )
+
+Project.create!(
+  :name => "Three",
+  :description => "Test 3 - Turtle Drones",
+  )
+
+Project.create!(
+  :name => "Four",
+  :description => "Test 4 - Drone Drones",
+  )
