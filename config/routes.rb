@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   # root :to => '#homepagegoeshere'
   resources :user_sessions
   resources :users do
-
-    resources :interests, only: [:new, :create]
+    resource :interests, only: [:new, :create] do
+      resources :survey_images
+    end
   end
 
   get 'login' => 'user_sessions#new', :as => :login
@@ -17,6 +18,8 @@ Rails.application.routes.draw do
   resources :initiatives do
     resources :projects
   end
+
+  get 'survey_images/ask' => 'survey_images#key'
 
 
 
