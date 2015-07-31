@@ -1,6 +1,6 @@
 <h1>Initiative: </h1> <h1> <%= @initiative.name %> </h1>
 <div class="banner">
-  <%= image_tag image_path(@initiative.image.url(:banner)) %>
+  <%= image_tag image_path(@initiative.image.url(:banner))%>
 </div>
 
 <%= @initiative.description %>
@@ -12,5 +12,6 @@
 </div>
 <% end %>
 
-
-<%= link_to('New Project' , new_initiative_project_path(@initiative)) %>
+  <% if current_user && @initiative.owner_id == current_user.id %>
+      <%= link_to('New Project' , new_initiative_project_path(@initiative)) %>
+    <% end %>

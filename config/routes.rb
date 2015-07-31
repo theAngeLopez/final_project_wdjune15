@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   end
 
   get 'login' => 'user_sessions#new', :as => :login
-  post 'logout' => 'user_sessions#destroy', :as => :logout
+  get 'signup' => 'users#new', :as => :signup
+  get 'logout' => 'user_sessions#destroy', :as => :logout
 
 
   resources :tags, only: [:new, :create]

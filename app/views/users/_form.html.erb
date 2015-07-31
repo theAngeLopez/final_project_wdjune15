@@ -14,29 +14,31 @@
 
     <div class="field">
        <%= f.label :first_name %><br />
-       <%= f.text_field :first_name %>
+       <%= f.text_field :first_name, :class => "form-control" %>
     </div>
     <div class="field">
        <%= f.label :last_name %><br />
-       <%= f.text_field :last_name %>
+       <%= f.text_field :last_name, :class => "form-control" %>
     </div>
      <div class ="field">
        <%= f.label :about_me %>
-       <%= f.text_area :about_me %>
+       <%= f.text_area :about_me, :class => "form-control" %>
     </div>
     <div class="field">
        <%= f.label :email %><br />
-       <%= f.text_field :email %>
+       <%= f.text_field :email, :class => "form-control" %>
     </div>
     <div class="field">
        <%= f.label :password %><br />
-       <%= f.password_field :password %>
+       <%= f.password_field :password, :class => "form-control" %>
     </div>
     <div class="field">
        <%= f.label :password_confirmation %><br />
-       <%= f.password_field :password_confirmation %>
+       <%= f.password_field :password_confirmation, :class => "form-control" %>
     </div>
-    <div class="actions"><%= f.submit class: 'input'%></div>
+    <div class="actions">
+      <%= f.submit :class => "btn btn-default" %>
+    </div>
 
   <% end %>
 

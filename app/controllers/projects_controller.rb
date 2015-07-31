@@ -1,11 +1,5 @@
 class ProjectsController < ApplicationController
 
-
-  def current_user
-    User.first
-  end
-  
-  #erase everything above
   def index
     @projects = Project.all
   end

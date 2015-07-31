@@ -3,19 +3,24 @@
 <head>
   <title>Final Cause Project</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <style type="text/css">
+   
+</style>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
   <div class="bs-component">
     <%= link_to "Initiatives", initiatives_url %>
     <%= link_to "Projects", projects_url %>
+
     <% if current_user %>
       <%= link_to "Edit Profile", edit_user_path(current_user.id) %>
-      <%= link_to "Logout", :logout, method: :post %>
+      <%= link_to "Logout", logout_path %>
     <% else %>
       <%= link_to "Register", new_user_path %> |
-      <%= link_to "Login", :login %>
+      <%= link_to "Login", login_path %>
     <% end %>
   </div>
   <div>
