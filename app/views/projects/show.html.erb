@@ -1,9 +1,15 @@
 <section class="project-details">
+<<<<<<< HEAD
   <%= image_tag @picture.url %>
 
   <h3><%= @project.name %></h3>
   <p><strong>City: </strong><%= @project.city %></p>
   <p><strong>Description: </strong><%= @project.description %></p>
+=======
+
+
+<%= render 'projectpartial' %>
+>>>>>>> 1e6675743897b366555a16a68915b005fa728750
 
  
 <div class="clear"></div>
@@ -11,7 +17,14 @@
 
 
 <% if current_user %>
+<<<<<<< HEAD
   <h4>Get in touch today with <%= @project.name %></h4>
   <%= form_for [@project] do |f| %>
     <%= f.submit %>
   <% end %>
+=======
+<h4>Get in touch today with <%= @project.name %></h4>
+EMAIL
+ <% end %>
+
+>>>>>>> 1e6675743897b366555a16a68915b005fa728750
