@@ -3,6 +3,8 @@
 <h1> ALL INITIATIVES!!</h1>
 
 <% @initiatives.each do |initiative| %>
+<div class="initiative_box">
 <%=link_to initiative.name, initiative_path(initiative.id) %> <br>
 <%=link_to image_tag(image_path(initiative.image.url(:small))), "/initiatives/#{initiative.id}" %> 
+</div>
 <% end %>

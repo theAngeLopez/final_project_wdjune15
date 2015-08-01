@@ -15,6 +15,7 @@ class InitiativesController < ApplicationController
 
   def create
     @initiative = Initiative.new(initiative_params)
+    @initiative.owner = current_user
     if @initiative.save
       redirect_to initiatives_url
     else
