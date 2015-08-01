@@ -2,6 +2,10 @@
 
 <section class = "project">
 <% @projects.each do |project| %>
-  <p><%= project.name %>, <%= project.description %>, <%= project.city %></p>
+
+  <strong><p><%= link_to project.name, project_path(project) %>, </p> </strong>
+  <p><%= project.description %> </p>
+  <p><%= project.city %></p>
+<br>
 </section>
 <% end %>

@@ -40,6 +40,7 @@ gem 'less-rails-bootstrap', '~> 3.3.5.0'
 # gem 'capistrano-rails', group: :development
 gem 'sorcery'
 gem 'bootstrap-sass', '~> 3.2.0'
+gem 'faker', '~> 1.4.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

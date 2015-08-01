@@ -3,13 +3,15 @@
 
 <%= render 'projectpartial' %>
 
- 
+
 <div class="clear"></div>
 </section>
 
 
 <% if current_user %>
-<h4>Get in touch today with <%= @project.name %></h4>
-EMAIL
+<button> <a href="mailto:<%= @project.email %>?
+subject=I'm interested in helping out with your <%= @project.name %> project!
+&body=Thanks for this tip"><h4>CONTACT</h4></button>
+<!-- Add user contribution tag/options -->
  <% end %>
 
