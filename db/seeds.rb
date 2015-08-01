@@ -4,8 +4,12 @@
 # Examples:
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'rubygems'
+require 'faker'
+
 SurveyImage.destroy_all
 Tag.destroy_all
+
 
 env   = Tag.create(name: "environment",   category: "cause")
 home  = Tag.create(name: "homelessness",  category: "cause")
@@ -32,24 +36,59 @@ SurveyImage.create(img_url:"EDU1_500.jpg", tag_id: edu.id, score: 5)
 SurveyImage.create(img_url:"EDU2_500.jpg", tag_id: edu.id, score: 5)
 SurveyImage.create(img_url:"EDU3_500.jpg", tag_id: edu.id, score: 5)
 
+one = Initiative.create(name: Faker::Company.name, description: Faker::Lorem.sentence, image: "https://www.unodc.org/images/drug-prevention-and-treatment/CND_Youth_prepare_Initiative_Strategy_01.jpg")
+two = Initiative.create(name: Faker::Company.name, description: Faker::Lorem.sentence, image: "http://web.mit.edu/wi/images/home_background.jpg")
+three = Initiative.create(name: Faker::Company.name, description: Faker::Lorem.sentence, image: "http://www.effectivemanagementleadership.com/images/61.jpg")
+four = Initiative.create(name: Faker::Company.name, description: Faker::Lorem.sentence, image: "http://transitionculture.org/wp-content/uploads/2007/unifiedhands.jpg")
 
-
-Project.create!(
-  :name => "One",
-  :description => "Test 1 - Turles",
+6.times do
+  Project.create!(
+  :name => Faker::App.name,
+  :description => Faker::Lorem.sentence,
+  :initiative_id => one,
+  # :tag_id => env,
+  :city => Faker::Address.city,
+  :contact_name => Faker::Name.name,
+  :email => Faker::Internet.email,
+  :phone_number => Faker::PhoneNumber.phone_number
   )
+end
 
+6.times do
 Project.create!(
-  :name => "Two",
-  :description => "Test 2 - Drones",
+  :name => Faker::App.name,
+  :description => Faker::Lorem.sentence,
+  :initiative_id => two,
+  # :tag_id => home,
+  :city => Faker::Address.city,
+  :contact_name => Faker::Name.name,
+  :email => Faker::Internet.email,
+  :phone_number => Faker::PhoneNumber.phone_number
   )
+end
 
+6.times do
 Project.create!(
-  :name => "Three",
-  :description => "Test 3 - Turtle Drones",
+  :name => Faker::App.name,
+  :description => Faker::Lorem.sentence,
+  :initiative_id => three,
+  # :tag_id => water,
+  :city => Faker::Address.city,
+  :contact_name => Faker::Name.name,
+  :email => Faker::Internet.email,
+  :phone_number => Faker::PhoneNumber.phone_number
   )
+end
 
+6.times do
 Project.create!(
-  :name => "Four",
-  :description => "Test 4 - Drone Drones",
+  :name => Faker::App.name,
+  :description => Faker::Lorem.sentence,
+  :initiative_id => four,
+  # :tag_id => edu,
+  :city => Faker::Address.city,
+  :contact_name => Faker::Name.name,
+  :email => Faker::Internet.email,
+  :phone_number => Faker::PhoneNumber.phone_number
   )
+end
