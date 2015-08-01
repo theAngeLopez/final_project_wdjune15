@@ -12,6 +12,8 @@
 </div>
 <% end %>
 
-  <% if current_user && @initiative.owner_id == current_user.id %>
-      <%= link_to('New Project' , new_initiative_project_path(@initiative)) %>
-    <% end %>
+<br>
+
+<% if current_user && @initiative.owner_id == current_user.id %>
+    <%= link_to('New Project' , new_initiative_project_path(@initiative)) %>
+<% end %>

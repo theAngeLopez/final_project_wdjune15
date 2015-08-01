@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  root 'welcome#index'
+  get 'welcome/index'
+
   # root :to => '#homepagegoeshere'
   resources :user_sessions
   resources :users do
