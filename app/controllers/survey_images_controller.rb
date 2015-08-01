@@ -1,20 +1,15 @@
 class SurveyImagesController < ApplicationController
   def index
-    @images = SurveyImage.all
+
+    @images = SurveyImage.all.sample(2)
     @interest = Interest.new
+    @user = current_user
+    @interest.user_id = current_user
   end
-  def show
-    @image = SurveyImage.find(params[:id])
-  end
+
 
   def ask
-    @img_1 = SurveyImage.find(rand(26...35))
-    @img_2 = SurveyImage.find(rand(26...35))
-
-
+    SurveyImage.all.pluck(:id).sample
   end
 
-  private
-  def method_name
-  end
 end

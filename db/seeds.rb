@@ -33,6 +33,7 @@ SurveyImage.create(img_url:"EDU2_500.jpg", tag_id: edu.id, score: 5)
 SurveyImage.create(img_url:"EDU3_500.jpg", tag_id: edu.id, score: 5)
 
 
+
 Project.create!(
   :name => "One",
   :description => "Test 1 - Turles",
