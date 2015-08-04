@@ -1,7 +1,11 @@
 class ProjectsController < ApplicationController
 
   def index
-    @projects = Project.all
+    all_projects = Project.all
+    if params[:tag_id]
+      @tag = Tag.find_by_id(params[:tag_id])
+      @projects = Project.search_by_tag(@tag.id)
+    end
   end
 
   def show

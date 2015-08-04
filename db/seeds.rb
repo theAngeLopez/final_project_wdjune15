@@ -7,11 +7,13 @@
 require 'rubygems'
 require 'faker'
 
+User.destroy_all
 SurveyImage.destroy_all
 Tag.destroy_all
 Project.destroy_all
 Initiative.destroy_all
 
+user = User.create(first_name: "Test", last_name: "User", email: "test@test.com", password: "testtest", password_confirmation: "testtest")
 
 env   = Tag.create(name: "environment",   category: "cause")
 home  = Tag.create(name: "homelessness",  category: "cause")
@@ -38,10 +40,10 @@ SurveyImage.create(img_url:"EDU1_500.jpg", tag_id: edu.id, score: 5)
 SurveyImage.create(img_url:"EDU2_500.jpg", tag_id: edu.id, score: 5)
 SurveyImage.create(img_url:"EDU3_500.jpg", tag_id: edu.id, score: 5)
 
-one = Initiative.create(name: Faker::Company.name, description: Faker::Lorem.sentence, image: "https://www.unodc.org/images/drug-prevention-and-treatment/CND_Youth_prepare_Initiative_Strategy_01.jpg")
-two = Initiative.create(name: Faker::Company.name, description: Faker::Lorem.sentence, image: "http://web.mit.edu/wi/images/home_background.jpg")
-three = Initiative.create(name: Faker::Company.name, description: Faker::Lorem.sentence, image: "http://www.effectivemanagementleadership.com/images/61.jpg")
-four = Initiative.create(name: Faker::Company.name, description: Faker::Lorem.sentence, image: "http://transitionculture.org/wp-content/uploads/2007/unifiedhands.jpg")
+one = Initiative.create(owner_id: user.id, name: Faker::Company.name, description: Faker::Lorem.sentence, image: "https://www.unodc.org/images/drug-prevention-and-treatment/CND_Youth_prepare_Initiative_Strategy_01.jpg")
+two = Initiative.create(owner_id: user.id, name: Faker::Company.name, description: Faker::Lorem.sentence, image: "http://web.mit.edu/wi/images/home_background.jpg")
+three = Initiative.create(owner_id: user.id, name: Faker::Company.name, description: Faker::Lorem.sentence, image: "http://www.effectivemanagementleadership.com/images/61.jpg")
+four = Initiative.create(owner_id: user.id, name: Faker::Company.name, description: Faker::Lorem.sentence, image: "http://transitionculture.org/wp-content/uploads/2007/unifiedhands.jpg")
 
 6.times do
   Project.create!(

@@ -1,9 +1,5 @@
 class Tag < ActiveRecord::Base
 
-  belongs_to :projects
-
-  def new
-    @tag = Tag.new
-  end
+  has_and_belongs_to_many :projects
 
 end
