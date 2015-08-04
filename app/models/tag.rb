@@ -1,6 +1,5 @@
 class Tag < ActiveRecord::Base
-  def new
-    @tag = Tag.new
-  end
+  has_many :projects
 
 end
+
