@@ -2,7 +2,7 @@
 
 <section class = "project">
 <% @projects.each do |project| %>
-
+  <img src="<%= project.img_url %>">
   <strong><p><%= link_to project.name, project_path(project) %>, </p> </strong>
   <p><%= project.description %> </p>
   <p><%= project.city %></p>

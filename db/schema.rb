@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150731193205) do
+ActiveRecord::Schema.define(version: 20150801195548) do
 
   create_table "authentications", force: :cascade do |t|
     t.integer  "user_id",    null: false
@@ -50,7 +50,8 @@ ActiveRecord::Schema.define(version: 20150731193205) do
     t.string   "contact_name"
     t.string   "email"
     t.string   "phone_number"
-    t.string   "image"
+    t.string   "img_url"
+    t.integer  "tag_id"
   end
 
   create_table "survey_images", force: :cascade do |t|

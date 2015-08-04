@@ -9,6 +9,8 @@ require 'faker'
 
 SurveyImage.destroy_all
 Tag.destroy_all
+Project.destroy_all
+Initiative.destroy_all
 
 
 env   = Tag.create(name: "environment",   category: "cause")
@@ -45,12 +47,13 @@ four = Initiative.create(name: Faker::Company.name, description: Faker::Lorem.se
   Project.create!(
   :name => Faker::App.name,
   :description => Faker::Lorem.sentence,
-  :initiative_id => one,
-  # :tag_id => env,
+  :initiative_id => one.id,
+  :tag_id => env.id,
   :city => Faker::Address.city,
   :contact_name => Faker::Name.name,
   :email => Faker::Internet.email,
-  :phone_number => Faker::PhoneNumber.phone_number
+  :phone_number => Faker::PhoneNumber.phone_number,
+  :img_url => "http://thesceneisdead.com/wp-content/uploads/2013/04/helping-hands.jpg"
   )
 end
 
@@ -58,12 +61,13 @@ end
 Project.create!(
   :name => Faker::App.name,
   :description => Faker::Lorem.sentence,
-  :initiative_id => two,
-  # :tag_id => home,
+  :initiative_id => two.id,
+  :tag_id => home.id,
   :city => Faker::Address.city,
   :contact_name => Faker::Name.name,
   :email => Faker::Internet.email,
-  :phone_number => Faker::PhoneNumber.phone_number
+  :phone_number => Faker::PhoneNumber.phone_number,
+  :img_url => "http://thesceneisdead.com/wp-content/uploads/2013/04/helping-hands.jpg"
   )
 end
 
@@ -71,12 +75,13 @@ end
 Project.create!(
   :name => Faker::App.name,
   :description => Faker::Lorem.sentence,
-  :initiative_id => three,
-  # :tag_id => water,
+  :initiative_id => three.id,
+  :tag_id => water.id,
   :city => Faker::Address.city,
   :contact_name => Faker::Name.name,
   :email => Faker::Internet.email,
-  :phone_number => Faker::PhoneNumber.phone_number
+  :phone_number => Faker::PhoneNumber.phone_number,
+  :img_url => "http://thesceneisdead.com/wp-content/uploads/2013/04/helping-hands.jpg"
   )
 end
 
@@ -84,11 +89,12 @@ end
 Project.create!(
   :name => Faker::App.name,
   :description => Faker::Lorem.sentence,
-  :initiative_id => four,
-  # :tag_id => edu,
+  :initiative_id => four.id,
+  :tag_id => edu.id,
   :city => Faker::Address.city,
   :contact_name => Faker::Name.name,
   :email => Faker::Internet.email,
-  :phone_number => Faker::PhoneNumber.phone_number
+  :phone_number => Faker::PhoneNumber.phone_number,
+  :img_url => "http://thesceneisdead.com/wp-content/uploads/2013/04/helping-hands.jpg"
   )
 end
