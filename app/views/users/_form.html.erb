@@ -1,45 +1,51 @@
-<div>
-  <%= form_for @user do |f| %>
 
-    <% if @user.errors.any? %>
-      <div class="error_messages">
-        <h2>Form is invalid</h2>
-        <ul>
-          <% for message in @user.errors.full_messages %>
-            <li><%= message %></li>
-          <% end %>
-        </ul>
+  <div class="container">
+  
+  <div class="row" id="pwd-container">
+    <div class="col-md-4"></div>
+    
+    <div class="col-md-4">
+      <section class="login-form">
+        <form method="post" action="#" role="login">
+          <img src="http://i57.tinypic.com/2wd95jr.png" class="img-responsive" alt="" />
+           <%= form_for @user do |f| %>
+                <div class="field">
+                  <%= f.label :first_name %><br />
+                  <%= f.text_field :first_name, :class => "form-control" %>
+                </div>
+                <div class="field">
+                   <%= f.label :last_name %><br />
+                   <%= f.text_field :last_name, :class => "form-control" %>
+                </div>
+                 <div class ="field">
+                   <%= f.label :about_me %>
+                   <%= f.text_area :about_me, :class => "form-control" %>
+                </div>
+                <div class="field">
+                   <%= f.label :email %><br />
+                   <%= f.text_field :email, :class => "form-control" %>
+                </div>
+                <div class="field">
+                   <%= f.label :password %><br />
+                   <%= f.password_field :password, :class => "form-control" %>
+                </div>
+                <div class="field">
+                   <%= f.label :password_confirmation %><br />
+                   <%= f.password_field :password_confirmation, :class => "form-control" %>
+                </div>
+                <div class="actions">
+                  <%= f.submit :class => "btn btn-default" %>
+                </div>
+              <% end %>
+          
+        </form>
+        
+      </section>  
       </div>
-    <% end %>
+      
+      <div class="col-md-4"></div>
+      
 
-    <div class="field">
-       <%= f.label :first_name %><br />
-       <%= f.text_field :first_name, :class => "form-control" %>
-    </div>
-    <div class="field">
-       <%= f.label :last_name %><br />
-       <%= f.text_field :last_name, :class => "form-control" %>
-    </div>
-     <div class ="field">
-       <%= f.label :about_me %>
-       <%= f.text_area :about_me, :class => "form-control" %>
-    </div>
-    <div class="field">
-       <%= f.label :email %><br />
-       <%= f.text_field :email, :class => "form-control" %>
-    </div>
-    <div class="field">
-       <%= f.label :password %><br />
-       <%= f.password_field :password, :class => "form-control" %>
-    </div>
-    <div class="field">
-       <%= f.label :password_confirmation %><br />
-       <%= f.password_field :password_confirmation, :class => "form-control" %>
-    </div>
-    <div class="actions">
-      <%= f.submit :class => "btn btn-default" %>
-    </div>
-
-  <% end %>
-
+  </div>
+  
 </div>
