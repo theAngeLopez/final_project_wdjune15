@@ -1,11 +1,48 @@
+<!-- <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+$(document).ready(function() {
+
+  $("select#search").change(function(){
+    $(this).closest("form").submit();
+  });
+
+});
+</head> -->
+<!-- 
+<body> -->
+
 <h1>All Projects</h1>
+
+
+
+
+<%= form_tag projects_path, method: :get, authentication: false do %>
+    <div class="control-group">
+      <%= label_tag :tag_id %> <br>
+      <%= select_tag(:tag_id, options_from_collection_for_select(Tag.where(category: 'cause'), "id", "name")) %>
+      <%= submit_tag "Search By Causes", :name => nil %>
+    </div>
+
+<% end %>
+
+<%= form_tag projects_path, method: :get, authentication: false do %>
+    <div class="control-group">
+      <%= label_tag :tag_id %> <br>
+      <%= select_tag(:tag_id, options_from_collection_for_select(Tag.where(category: 'contribution'), "id", "name")) %>
+      <%= submit_tag " Ways To Contribute", :name => nil %>
+    </div>
+<% end %>
 
 <section class = "project">
 <% @projects.each do |project| %>
-  <img src="<%= project.img_url %>">
+  <%= image_tag(image_path(project.image.url(:medium))) %>
   <strong><p><%= link_to project.name, project_path(project) %>, </p> </strong>
   <p><%= project.description %> </p>
   <p><%= project.city %></p>
+  <p><%= project.tag_id %></p>
 <br>
 </section>
 <% end %>
+
+</body>
