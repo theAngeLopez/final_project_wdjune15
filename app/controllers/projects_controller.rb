@@ -3,8 +3,10 @@ class ProjectsController < ApplicationController
   def index
     @all_projects = Project.all
     if params[:tag_id]
-      @tag = Tag.find_by_id(params[:tag_id])
-      @projects = Project.search_by_tag(@tag.id)
+      # @projects = Project.where("tag_id = ?", "%#{params[:tag_id]}%")
+      @projects = Project.where(tag_id: params[:tag_id])
+    else
+      @projects = Project.all
     end
   end
 
@@ -30,6 +32,6 @@ class ProjectsController < ApplicationController
 
   private
   def project_params
-    params.require(:project).permit(:name, :city, :description, :initiative_id, :image, :contact_name, :email, :phone_number)
+    params.require(:project).permit(:name, :city, :description, :initiative_id, :image, :contact_name, :email, :phone_number, :tag_id)
   end
 end
