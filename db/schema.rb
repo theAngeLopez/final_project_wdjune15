@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20150804185249) do
     t.string   "contact_name"
     t.string   "email"
     t.string   "phone_number"
-    t.string   "img_url"
+    t.string   "image"
     t.integer  "tag_id"
   end
 

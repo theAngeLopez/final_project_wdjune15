@@ -1,4 +1,7 @@
-<%= link_to "New Initiative", "/initiatives/new" %> <br>
+<% if current_user  %>
+    <%= link_to "New Initiative", "/initiatives/new" %> <br>
+<% end %>
+
 
 <h1> ALL INITIATIVES!!</h1>
 

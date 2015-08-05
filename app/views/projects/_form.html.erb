@@ -21,6 +21,11 @@
       <%= f.file_field :image, :class => "form-control"  %> 
     </div>
 
+    <div class="control-group">
+      <%= f.label :tag_id, :value => "Cause" %> <br>
+      <%= f.select(:tag_id, grouped_options_for_select(Tag.option_groups),{},{multiple: true}) %>
+    </div>
+
 <h4> Contact Information </h4>
 
     <div class="field">
