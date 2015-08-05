@@ -28,9 +28,9 @@ gem 'mini_magick'
 
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem "twitter-bootstrap-rails"
+# gem "twitter-bootstrap-rails"
 
-gem 'less-rails-bootstrap', '~> 3.3.5.0'
+# gem 'less-rails-bootstrap', '~> 3.3.5.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 # Use Unicorn as the app server
@@ -39,7 +39,7 @@ gem 'less-rails-bootstrap', '~> 3.3.5.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'sorcery'
-gem 'bootstrap-sass', '~> 3.2.0'
+# gem 'bootstrap-sass', '~> 3.2.0'
 gem 'faker', '~> 1.4.3'
 
 group :development, :test do

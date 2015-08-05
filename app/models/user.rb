@@ -9,4 +9,8 @@ class User < ActiveRecord::Base
   validates :password, confirmation: true
   validates :password_confirmation, presence: true
 
+  def full_name
+    first_name + " " + last_name
+  end
+
 end

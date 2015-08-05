@@ -1,17 +1,25 @@
 <section class="project-details">
 
-
 <%= render 'projectpartial' %>
-
 
 <div class="clear"></div>
 </section>
 
-
 <% if current_user %>
-<button> <a href="mailto:<%= @project.email %>?
-subject=I'm interested in helping out with your <%= @project.name %> project!
-&body=Thanks for this tip"><h4>CONTACT</h4></button>
-<!-- Add user contribution tag/options -->
- <% end %>
+  <button> <a href="mailto:<%= @project.email %>?
+  subject=I want to join your <%= @project.name %> project!
+  &body=
+  Hey, my name is <%= @user.first_name %> and I'd like to help out with your project.
+  %0D%0D
+  Here are my Cause stats:
 
+  %0D%0D
+  Here's what I'm able to contribute to your project:
+
+  %0D%0D
+  Excited to hear from you soon,
+  %0D
+  <%= @user.first_name %>
+  "><h4>CONTACT</h4></button>
+<!-- Add user contribution tag/options -->
+<% end %>

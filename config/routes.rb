@@ -3,7 +3,6 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'welcome/index'
 
-  # root :to => '#homepagegoeshere'
   resources :user_sessions
   resources :users do
     resource :interests, only: [:new, :create] do
@@ -11,10 +10,11 @@ Rails.application.routes.draw do
     end
   end
 
+  get 'survey' => 'survey_images#ask'
+
   get 'login' => 'user_sessions#new', :as => :login
   get 'signup' => 'users#new', :as => :signup
   get 'logout' => 'user_sessions#destroy', :as => :logout
-
 
   resources :tags, only: [:new, :create]
   resources :projects
@@ -23,7 +23,6 @@ Rails.application.routes.draw do
   end
 
   get 'survey_images/ask' => 'survey_images#key'
-
 
 
   # The priority is based upon order of creation: first created -> highest priority.
