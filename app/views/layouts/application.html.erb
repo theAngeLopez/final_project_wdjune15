@@ -22,8 +22,9 @@
       </button>
       <div class="collapse navbar-collapse navHeaderCollapse">
         <ul class= "nav navbar-nav navbar-right">
+          <li> <%= link_to "Recommended", suggested_projects_url %> </li>
+          <li> <%= link_to "Explore", projects_url %> </li>
           <li> <%= link_to "Initiatives", initiatives_url %> </li>
-          <li> <%= link_to "Projects", projects_url%> </li>
 
           <% if current_user %>
           <li>  <%= link_to "My Profile", user_path(current_user) %> </li>
