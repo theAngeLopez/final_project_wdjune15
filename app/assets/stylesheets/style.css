@@ -643,27 +643,30 @@ body {
 
 .login-form {
   margin-top: 60px;
+
 }
 
-form[role=login] {
+
+.login1 {
   color: #5d5d5d;
   background: #f2f2f2;
   padding: 26px;
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
+  opacity: 0.95;
 }
-  form[role=login] img {
+  .login1 img {
     display: block;
     margin: 0 auto;
     margin-bottom: 35px;
   }
-  form[role=login] input,
-  form[role=login] button {
+  .login1 input,
+  .login1 button {
     font-size: 18px;
     margin: 16px 0;
   }
-  form[role=login] > div {
+  .login1 > div {
     text-align: center;
   }
   
