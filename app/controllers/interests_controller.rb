@@ -1,7 +1,37 @@
 class InterestsController < ApplicationController
+  def show
+    environment   = Tag.where(name: "environment").first
+    water         = Tag.where(name: "water").first
+    homelessness  = Tag.where(name: "homelessness").first
+    education     = Tag.where(name: "education").first
 
-  def survey
+    @interests    = current_user.interests.where(tag: environment).first
 
+    @env    = current_user.interests.where(tag: environment).first
+    @wat    = current_user.interests.where(tag: water).first
+    @hom    = current_user.interests.where(tag: homelessness).first
+    @edu    = current_user.interests.where(tag: education).first
+
+    arr = [
+      {
+        name: environment.name,
+        score: @env.score
+      },
+      {
+        name: water.name,
+        score: @wat.score
+      },
+      {
+        name: homelessness.name,
+        score: @hom.score
+      },
+      {
+        name: education.name,
+        score: @edu.score
+      }
+    ]
+
+    render json: arr.to_json
   end
 
   def new
@@ -20,8 +50,6 @@ class InterestsController < ApplicationController
     end
 
     @interest.save
-
-    render
   end
 
   private
