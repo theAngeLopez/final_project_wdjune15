@@ -62,7 +62,7 @@ end
 6.times do
 Project.create!(
   :name => Faker::App.name,
-  :description => Faker::Lorem.sentence,
+  :description => Faker::Lorem.sentence(20),
   :initiative_id => two.id,
   :tag_id => home.id,
   :city => Faker::Address.city,

@@ -675,5 +675,26 @@ body {
     color: #fff;
   }
 
-
+.login2 {
+  color: #3b5998;
+  background: #8b9dc3;
+  padding: 0px;
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  opacity: 0.95;
+}
+  .login2 img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 35px;
+  }
+  .login2 input,
+  .login2 button {
+    font-size: 18px;
+    margin: 16px 0;
+  }
+  .login2 > div {
+    text-align: center;
+  }
 
