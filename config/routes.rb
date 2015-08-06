@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :user_sessions
   resources :users do
-    resource :interests, only: [:new, :create] do
+    resource :interests, only: [:show, :new, :create] do
       resources :survey_images
     end
   end
@@ -22,8 +22,7 @@ Rails.application.routes.draw do
     resources :projects
   end
 
-  get 'survey_images/ask' => 'survey_images#key'
-
+  get 'survey_images/ask' => 'survey_images#ask'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
