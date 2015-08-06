@@ -22,7 +22,7 @@ body {
     background: #f7f7f7; 
 }
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, .lead {
-    font-weight: 300;
+    font-weight: 500;
 }
 #header, #feature, #about, #testimonial, #screenshots, #portfolio, #image, #video, #newsletter, #download, #social {
   font-family: 'Raleway', sans-serif;
@@ -634,11 +634,7 @@ http://www.bootstrapzen.com/item/135/simple-login-form-logo/
   }
 
 body {
-  background: url(http://i60.tinypic.com/307rn74.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+  background-color: #f7f7f7; 
 }
 
 .login-form {
@@ -648,8 +644,8 @@ body {
 
 
 .login1 {
-  color: #5d5d5d;
-  background: #f2f2f2;
+  color: #3b5998;
+  background: #8b9dc3;
   padding: 26px;
   border-radius: 10px;
   -moz-border-radius: 10px;
@@ -678,3 +674,6 @@ body {
   .form-links a {
     color: #fff;
   }
+
+
+
