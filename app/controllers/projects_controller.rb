@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
 
   def index
+    @all_projects = Project.all
     if params[:tag_id]
       # @projects = Project.where("tag_id = ?", "%#{params[:tag_id]}%")
       @projects = Project.where(tag_id: params[:tag_id])
@@ -11,6 +12,7 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find(params[:id])
+    @user = current_user
   end
 
   def new
@@ -28,7 +30,7 @@ class ProjectsController < ApplicationController
     end
   end
 
-  private 
+  private
   def project_params
     params.require(:project).permit(:name, :city, :description, :initiative_id, :image, :contact_name, :email, :phone_number, :tag_id)
   end

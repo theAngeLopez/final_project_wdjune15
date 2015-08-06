@@ -1,1 +1,17 @@
-ask.html.erb
+<h1>Select one of the images below:</h1>
+
+
+<% @images.each do |i| %>
+
+  <%= form_for [@user, @interest], url: survey_path, method: :get do |f| %>
+
+    <%= f.hidden_field :tag_id, :value => i.tag_id %>
+    <%= f.hidden_field :score, :value => i.score %>
+
+    <p><%= image_submit_tag(i.img_url) %></p>
+  <% end %>
+
+<% end %>
+<%= link_to "View Profile", user_url(@user) %>
+
+<!-- set timeout -->
