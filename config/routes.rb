@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   end
 
   get 'survey' => 'survey_images#ask'
+  get 'suggested_projects' => 'projects#suggested'
 
   get 'login' => 'user_sessions#new', :as => :login
   get 'signup' => 'users#new', :as => :signup

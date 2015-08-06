@@ -10,6 +10,14 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def suggested
+    @user = current_user
+    @projects = []
+    @user.interests.order('score desc').each do |i|
+      @projects = @projects.concat(Project.where(tags: i.tag_id))
+    end
+  end
+
   def show
     @project = Project.find(params[:id])
     @user = current_user
