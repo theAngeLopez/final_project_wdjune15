@@ -2,23 +2,23 @@
   <head>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
 
       var env, wat, hom, edu;
-
-      $.ajax({
-        url: 'http://localhost:3000/users/1/interests',
-        method: 'get',
-        dataType: 'json'
-      }).done(function(interests) {
-        env = interests[0];
-        wat = interests[1];
-        hom = interests[2];
-        edu = interests[3];
-      });
+      function getStats() {
+        $.ajax({
+          url: 'http://localhost:3000/users/1/interests',
+          method: 'get',
+          dataType: 'json'
+        }).done(function(interests) {
+          env = interests[0];
+          wat = interests[1];
+          hom = interests[2];
+          edu = interests[3];
+        });
+      };
 
       function drawChart() {
+        
         var data = google.visualization.arrayToDataTable([
           ['Cause', 'Score'],
           ['Water',             wat.score],
@@ -39,6 +39,10 @@
         var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
         chart.draw(data, options);
       }
+
+      getStats();
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
     </script>
   </head>
   <body>
