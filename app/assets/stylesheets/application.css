@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+ .truncate {
+    text-overflow: ellipsis;
+    width: 250px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+ }
