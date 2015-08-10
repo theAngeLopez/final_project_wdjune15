@@ -20,9 +20,9 @@ home  = Tag.create(name: "homelessness",  category: "cause")
 water = Tag.create(name: "water",         category: "cause")
 edu   = Tag.create(name: "education",     category: "cause")
 
-Tag.create(name: "monetary",  category: "contribution")
-Tag.create(name: "volunteer", category: "contribution")
-Tag.create(name: "service",   category: "contribution")
+monetary = Tag.create(name: "monetary",  category: "contribution")
+volunteer = Tag.create(name: "volunteer", category: "contribution")
+service = Tag.create(name: "service",   category: "contribution")
 
 SurveyImage.create(img_url:"ENV1_500.jpg", tag_id: env.id, score: 5)
 SurveyImage.create(img_url:"ENV2_500.jpg", tag_id: env.id, score: 5)
@@ -46,57 +46,56 @@ three = Initiative.create(owner_id: user.id, name: Faker::Company.name, descript
 four = Initiative.create(owner_id: user.id, name: Faker::Company.name, description: Faker::Lorem.sentence, image: "http://transitionculture.org/wp-content/uploads/2007/unifiedhands.jpg")
 
 6.times do
-  Project.create!(
+  p = Project.create!(
   :name => Faker::App.name,
   :description => Faker::Lorem.sentence,
   :initiative_id => one.id,
-  :tag_id => env.id,
   :city => Faker::Address.city,
   :contact_name => Faker::Name.name,
   :email => Faker::Internet.email,
   :phone_number => Faker::PhoneNumber.phone_number,
-  :img_url => "http://thesceneisdead.com/wp-content/uploads/2013/04/helping-hands.jpg"
+  :image => "http://thesceneisdead.com/wp-content/uploads/2013/04/helping-hands.jpg"
   )
+  p.tags << env
 end
 
 6.times do
-Project.create!(
+p = Project.create!(
   :name => Faker::App.name,
   :description => Faker::Lorem.sentence(20),
   :initiative_id => two.id,
-  :tag_id => home.id,
   :city => Faker::Address.city,
   :contact_name => Faker::Name.name,
   :email => Faker::Internet.email,
   :phone_number => Faker::PhoneNumber.phone_number,
-  :img_url => "http://thesceneisdead.com/wp-content/uploads/2013/04/helping-hands.jpg"
+  :image => "http://thesceneisdead.com/wp-content/uploads/2013/04/helping-hands.jpg"
   )
+
 end
 
 6.times do
-Project.create!(
+p = Project.create!(
   :name => Faker::App.name,
   :description => Faker::Lorem.sentence,
   :initiative_id => three.id,
-  :tag_id => water.id,
   :city => Faker::Address.city,
   :contact_name => Faker::Name.name,
   :email => Faker::Internet.email,
   :phone_number => Faker::PhoneNumber.phone_number,
-  :img_url => "http://thesceneisdead.com/wp-content/uploads/2013/04/helping-hands.jpg"
+  :image => "http://thesceneisdead.com/wp-content/uploads/2013/04/helping-hands.jpg"
   )
 end
 
 6.times do
-Project.create!(
+p = Project.create!(
   :name => Faker::App.name,
   :description => Faker::Lorem.sentence,
   :initiative_id => four.id,
-  :tag_id => edu.id,
   :city => Faker::Address.city,
   :contact_name => Faker::Name.name,
   :email => Faker::Internet.email,
   :phone_number => Faker::PhoneNumber.phone_number,
-  :img_url => "http://thesceneisdead.com/wp-content/uploads/2013/04/helping-hands.jpg"
+  :image => "http://thesceneisdead.com/wp-content/uploads/2013/04/helping-hands.jpg"
   )
+p.tags << edu
 end
