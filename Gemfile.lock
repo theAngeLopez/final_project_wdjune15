@@ -191,7 +191,6 @@ DEPENDENCIES
   bootstrap-sass (~> 3.2.0)
   byebug
   carrierwave
-  coffee-rails (~> 4.1.0)
   faker (~> 1.4.3)
   jbuilder (~> 2.0)
   jquery-rails
