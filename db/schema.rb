@@ -51,7 +51,6 @@ ActiveRecord::Schema.define(version: 20150804185249) do
     t.string   "email"
     t.string   "phone_number"
     t.string   "image"
-    t.integer  "tag_id"
   end
 
   create_table "projects_tags", force: :cascade do |t|
