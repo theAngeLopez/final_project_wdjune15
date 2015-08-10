@@ -1,11 +1,66 @@
-<h1>All Projects</h1>
-
-<section class = "project">
-<% @projects.each do |project| %>
-  <img src="<%= project.img_url %>">
-  <strong><p><%= link_to project.name, project_path(project) %>, </p> </strong>
-  <p><%= project.description %> </p>
-  <p><%= project.city %></p>
-<br>
+<!-- Header -->
+<section id="projectsbackground" class="container-fluid text-white">
+    <div class="container">
+      <div class="row clearfix">
+        <div class="col-md-6 column">
+          <h1 class="text-left">
+            <i id="logo" img class="fa fa-heartbeat"></i>
+          </h1>
+          <h1 class="main_title">Explore our projects.</h1>
+          <p class="text-left lead">
+            Based upon your interests and skills we connect you with like minded people!
+          </p>
+        </div>
+        <div class="col-md-6 column">
+          <div id="main-slider" class="flexslider">
+            <ul class="slides">
+              <li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div><!-- /container  -->
 </section>
+<!-- end header -->
+
+<section class="login2">
+<div align="center">
+      <%= form_tag projects_path, method: :get, authentication: false do %>
+          <div class="control-group">
+            <%= select_tag(:tag_id, options_from_collection_for_select(Tag.where(category: 'cause'), "id", "name")) %>
+            <%= submit_tag "Causes", :name => nil %>
+          </div>
 <% end %>
+<div align="center">
+<%= form_tag projects_path, method: :get, authentication: false do %>
+    <div class="control-group">
+      <%= select_tag(:tag_id, options_from_collection_for_select(Tag.where(category: 'contribution'), "id", "name")) %>
+      <%= submit_tag "Contributions", :name => nil %>
+    </div>
+<% end %>
+</div>
+</div>
+</div>
+</section>
+
+
+<div id="about" class="container text-blue">
+<div class="row clearfix">
+<div class="col-md-12 column p_title">
+<% @projects.each do |project| %>
+<div class="col-xs-6 col-md-3 column text-center">
+  <%= image_tag(image_path(project.image.url(:medium))) %>
+  <strong><p><%= link_to project.name, project_path(project) %>, </p> </strong>
+  <p><%= truncate(project.description, length: 100) %> </p>
+  <p><%= project.city %></p>
+
+</div>
+<% end %>
+</div>
+</div>
+</div>
+
+
+
+

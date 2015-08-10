@@ -1,15 +1,25 @@
 class ProjectsController < ApplicationController
 
   def index
-    all_projects = Project.all
+    @all_projects = Project.all
     if params[:tag_id]
-      @tag = Tag.find_by_id(params[:tag_id])
-      @projects = Project.search_by_tag(@tag.id)
+      @projects = Tag.find_by_id(params[:tag_id]).projects
+    else
+      @projects = Project.all
+    end
+  end
+
+  def suggested
+    @user = current_user
+    @projects = []
+    @user.interests.order('score desc').each do |i|
+      @projects = @projects.concat(Tag.find(i.tag_id).projects)
     end
   end
 
   def show
     @project = Project.find(params[:id])
+    @user = current_user
   end
 
   def new
@@ -27,8 +37,8 @@ class ProjectsController < ApplicationController
     end
   end
 
-  private 
+  private
   def project_params
-    params.require(:project).permit(:name, :city, :description, :initiative_id, :image, :contact_name, :email, :phone_number)
+    params.require(:project).permit(:name, :city, :description, :initiative_id, :image, :contact_name, :email, :phone_number, :tag_id)
   end
 end

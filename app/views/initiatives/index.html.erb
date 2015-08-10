@@ -1,4 +1,36 @@
-<%= link_to "New Initiative", "/initiatives/new" %> <br>
+<!-- Header -->
+<section id="inbackground" class="container-fluid text-white">
+    <div class="container">
+      <div class="row clearfix">
+        <div class="col-md-6 column">
+          <h1 class="text-left">
+            <i id="logo" img class="fa fa-home "></i>
+          </h1>
+          <h1 class="main_title">Explore our initiatives.</h1>
+          <p class="text-left lead">
+            Discover how YOU can make a difference! Connect with passionate individuals with amazing initiatives.    
+          </p>
+        </div>
+        <div class="col-md-6 column">
+          <div id="main-slider" class="flexslider">
+            <ul class="slides">
+              <li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div><!-- /container  -->
+</section>   
+<!-- end header -->
+
+
+
+
+<% if current_user  %>
+    <%= link_to "New Initiative", "/initiatives/new" %> <br>
+<% end %>
+
 
 <h1> ALL INITIATIVES!!</h1>
 

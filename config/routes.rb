@@ -3,18 +3,19 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'welcome/index'
 
-  # root :to => '#homepagegoeshere'
   resources :user_sessions
   resources :users do
-    resource :interests, only: [:new, :create] do
+    resource :interests, only: [:show, :new, :create] do
       resources :survey_images
     end
   end
 
+  get 'survey' => 'survey_images#ask'
+  get 'suggested_projects' => 'projects#suggested'
+
   get 'login' => 'user_sessions#new', :as => :login
   get 'signup' => 'users#new', :as => :signup
   get 'logout' => 'user_sessions#destroy', :as => :logout
-
 
   resources :tags, only: [:new, :create]
   resources :projects
@@ -22,9 +23,7 @@ Rails.application.routes.draw do
     resources :projects
   end
 
-  get 'survey_images/ask' => 'survey_images#key'
-
-
+  get 'survey_images/ask' => 'survey_images#ask'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

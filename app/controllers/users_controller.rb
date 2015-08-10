@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      auto_login(@user)
       redirect_back_or_to projects_url, :notice => "Signed up!"
     else
       render :new, :notice => "Try again"

@@ -1,6 +1,89 @@
-<h1>LANDING PAGE</h1>
-<div class="jumbotron">
-  <%= image_tag "example.jpg", :class =>"pull-right" %>
-  <h1> NAME OF COMPANY</h1>
-  <p> Our mission is to enhance the accessibility of people to organizations, initiatives and social projects. Through our web app people have instant accesibility to organizations and social projects that they easily connect through the causes that interest them. </p>
-</div>
+
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+
+
+<!-- Header -->
+<section id="header" class="container-fluid text-white">
+    <div class="container">
+      <div class="row clearfix">
+        <div class="col-md-6 column">
+          <h1 class="text-left">
+            <i id="logo" img class="fa fa-tasks"></i>
+          </h1>
+          <h1 class="main_title">We make finding an initiative that suits YOU easy!</h1>
+          <p class="text-left lead">
+            Our unique compatability survey will find projects based on the causes you're passionate about and the way you want to contribute.
+          </p>
+          <a href="http://localhost:3000/users/new" class="btn btn-lg btn-lead"><span class=""></span> Find my match!</a>
+
+          <a href="http://localhost:3000/projects" class="btn btn-lg btn-link"><span class="fa fa-arrow-circle-o-right"></span> Check out some projects</a>
+        </div>
+        <div class="col-md-6 column">
+          <div id="main-slider" class="flexslider">
+            <ul class="slides">
+              <li>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div><!-- /container  -->
+</section>
+<!-- end header -->
+
+<!-- About -->
+<div id="about" class="container text-blue">
+  <div class="row clearfix">
+    <div class="col-md-12 column p_title">
+      <h1 class="text-center">Featured Projects</h1>
+       <p class="lead text-center">Join <strong>2,642,010</strong> people looking to change the world in their unique way!</p>
+    </div>
+  </div>
+  <div class="row clearfix staff">
+    <div class="col-xs-6 col-md-3 column text-center">
+      <img class="img-circle" alt="140x140" src="http://i57.tinypic.com/2r7at1u.png" />
+     <strong><h1 class="">Water</h1></strong>
+      <span>Through Pipeline, we're tackling the water crisis - a system of local leaders working together to keep water flowing at charity: water projects around the world.</span>
+    </div>
+    <div class="col-xs-6 col-md-3 column text-center">
+      <img class="img-circle" alt="140x140" src="http://i58.tinypic.com/wtx1dl.png" />
+    <strong><h1 class="">Homelessness</h1></strong>
+      <span>Sandwich for a Story is breaking down the barrier between homeless populations and the rest of society through simple acts of engagement.</span>
+    </div>
+    <div class="col-xs-6 col-md-3 column text-center">
+      <img class="img-circle" alt="140x140" src="http://i57.tinypic.com/1h57dk.png" />
+      <strong><h1 class="">Education</h1></strong>
+      <span>At Pencils of Promise, we build schools to ensure that our students have access to a quality learning environment.</span>
+    </div>
+    <div class="col-xs-6 col-md-3 column text-center">
+      <img class="img-circle" alt="140x140" src="http://i61.tinypic.com/243p0tj.png" />
+      <strong><h1 class="">Environment</h1></strong>
+      <span>The Toronto Community Garden Network (TCGN) is made up of interested and energetic individuals and organizations from across the GTA.</span>
+    </div>
+  </div>
+</div> <!-- container -->
+<!-- end about -->
+
+
+
+
+
+
+
+
+
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>

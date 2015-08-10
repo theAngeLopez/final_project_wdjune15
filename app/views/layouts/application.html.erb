@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Final Cause Project</title> 
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <style type="text/css">
-   
-</style>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <title>Final Cause Project</title>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-  <div class="navbar navbar-default navbar-fixed-top">
+  <div class="navbar-default navbar-fixed-top">
     <div class="container">
-      <h3 class="navbar-brand"> Name of Site </h3>
+    <%= link_to root_url do %>
+     <img class="sambar-brand" src="http://i61.tinypic.com/4h4i9c.png"/>
+   <% end %>
       <button class="navbar-toggle" data-toggle="collapse" data-target =".navHeaderCollapse">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -22,11 +21,15 @@
       </button>
       <div class="collapse navbar-collapse navHeaderCollapse">
         <ul class= "nav navbar-nav navbar-right">
+
+        <% if current_user %>
+          <li> <%= link_to "Recommended", suggested_projects_url %> </li>
+        <% end %>
+          <li> <%= link_to "Explore", projects_url %> </li>
           <li> <%= link_to "Initiatives", initiatives_url %> </li>
-          <li> <%= link_to "Projects", projects_url%> </li>
 
           <% if current_user %>
-          <li>  <%= link_to "Edit Profile", edit_user_path(current_user.id) %> </li>
+          <li>  <%= link_to "My Profile", user_path(current_user) %> </li>
           <li>  <%= link_to "Logout", logout_path %> </li>
           <% else %>
           <li>  <%= link_to "Register", new_user_path %> </li>
@@ -37,12 +40,15 @@
     </div>
   </div>
 
-  
+
   <div>
     <p id="notice"><%= flash[:notice] %></p>
     <p id="alert"><%= flash[:alert] %></p>
   </div>
 
+<br>
+<br>
+<br>
 
 <%= yield %>
 
@@ -50,4 +56,3 @@
 
 </body>
 </html>
-
