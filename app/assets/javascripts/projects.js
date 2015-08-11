@@ -1,5 +1,5 @@
 
-$(document).on('ready', (function() {
+$(document).on('ready', function() {
   function display_search_results() {
     if (this.readyState === 4) {
       console.log(this);
