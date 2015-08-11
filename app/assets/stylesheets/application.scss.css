@@ -2,34 +2,3 @@
 @import "layout";
 @import "index";
 @import "neat";
-
-
-
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
-<<<<<<< HEAD:app/assets/stylesheets/application.scss.css
- *
-=======
- *
- *= require_tree .
- *= require_self
- */
-
- .truncate {
-    text-overflow: ellipsis;
-    width: 250px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
- }
->>>>>>> 14740ee7647bbe97e8f4847471de151293ec1ef6:app/assets/stylesheets/application.css
