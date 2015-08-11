@@ -1,13 +1,17 @@
 <%= form_tag projects_path , method: :get do %>
+  <span id="search-form">
   <h4>Causes</h4>
     <% Tag.where(category: 'cause').all.each do |t| %>
       <%= label_tag t.name %>
       <%= check_box_tag "tags[#{t.id}]" %>
     <% end %>
+  </span>
+  <span id="search-form">
   <h4>Contributions</h4>
     <% Tag.where(category: 'contribution').all.each do |t| %>
       <%= label_tag t.name %>
       <%= check_box_tag "tags[#{t.id}]" %>
     <% end %>
   <%= submit_tag "Search" %>
+  </span>
 <% end %>

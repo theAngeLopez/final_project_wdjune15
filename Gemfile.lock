@@ -100,8 +100,6 @@ GEM
       multi_xml (~> 0.5)
       rack (~> 1.2)
     pg (0.18.2)
-    postgres (0.8.1)
-      pg (~> 0)
     pry (0.10.1)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -188,7 +186,7 @@ DEPENDENCIES
   jquery-rails
   less-rails
   mini_magick
-  postgres
+  pg
   pry-rails
   rails (= 4.2.2)
   sass-rails (~> 5.0)
