@@ -8,7 +8,7 @@
           </h1>
           <h1 class="main_title">Explore our initiatives.</h1>
           <p class="text-left lead">
-            Discover how YOU can make a difference! Connect with passionate individuals with amazing initiatives.    
+            Discover how YOU can make a difference! Connect with passionate individuals with amazing initiatives.
           </p>
         </div>
         <div class="col-md-6 column">
@@ -21,7 +21,7 @@
         </div>
       </div>
     </div><!-- /container  -->
-</section>   
+</section>
 <!-- end header -->
 
 
@@ -37,6 +37,6 @@
 <% @initiatives.each do |initiative| %>
 <div class="initiative_box">
 <%=link_to initiative.name, initiative_path(initiative.id) %> <br>
-<%=link_to image_tag(image_path(initiative.image.url(:small))), "/initiatives/#{initiative.id}" %> 
+<%=link_to image_tag(image_path(initiative.image.url(:small))), "/initiatives/#{initiative.id}" %>
 </div>
 <% end %>
