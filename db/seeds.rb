@@ -70,6 +70,7 @@ p = Project.create!(
   :phone_number => Faker::PhoneNumber.phone_number,
   :image => "http://thesceneisdead.com/wp-content/uploads/2013/04/helping-hands.jpg"
   )
+  p.tags << home
 
 end
 
@@ -84,6 +85,8 @@ p = Project.create!(
   :phone_number => Faker::PhoneNumber.phone_number,
   :image => "http://thesceneisdead.com/wp-content/uploads/2013/04/helping-hands.jpg"
   )
+
+  p.tags << water
 end
 
 6.times do

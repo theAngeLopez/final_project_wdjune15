@@ -3,7 +3,6 @@ class ProjectsController < ApplicationController
   def index
     @all_projects = Project.all
     if params[:tag_id]
-      # @projects = Project.where("tag_id = ?", "%#{params[:tag_id]}%")
       @projects = Tag.find_by_id(params[:tag_id]).projects
     else
       @projects = Project.all
@@ -14,7 +13,7 @@ class ProjectsController < ApplicationController
     @user = current_user
     @projects = []
     @user.interests.order('score desc').each do |i|
-      @projects = @projects.concat(Tag.where(tags: i.tag_id))
+      @projects = @projects.concat(Tag.find(i.tag_id).projects)
     end
   end
 

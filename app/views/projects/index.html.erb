@@ -52,7 +52,7 @@
 <div class="col-xs-6 col-md-3 column text-center">
   <%= image_tag(image_path(project.image.url(:medium))) %>
   <strong><p><%= link_to project.name, project_path(project) %>, </p> </strong>
-  <p><%= project.description %> </p>
+  <p><%= truncate(project.description, length: 100) %> </p>
   <p><%= project.city %></p>
 
 </div>

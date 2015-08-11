@@ -7,27 +7,27 @@ class InterestsController < ApplicationController
 
     @interests    = current_user.interests.where(tag: environment).first
 
-    @env    = current_user.interests.where(tag: environment).first
-    @wat    = current_user.interests.where(tag: water).first
-    @hom    = current_user.interests.where(tag: homelessness).first
-    @edu    = current_user.interests.where(tag: education).first
+    @env    = current_user.interest_score(environment)
+    @wat    = current_user.interest_score(water)
+    @hom    = current_user.interest_score(homelessness)
+    @edu    = current_user.interest_score(education)
 
     arr = [
       {
         name: environment.name,
-        score: @env.score
+        score: @env
       },
       {
         name: water.name,
-        score: @wat.score
+        score: @wat
       },
       {
         name: homelessness.name,
-        score: @hom.score
+        score: @hom
       },
       {
         name: education.name,
-        score: @edu.score
+        score: @edu
       }
     ]
 
