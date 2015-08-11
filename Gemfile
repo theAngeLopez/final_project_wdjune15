@@ -35,6 +35,8 @@ gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+gem 'bourbon'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'sorcery'
