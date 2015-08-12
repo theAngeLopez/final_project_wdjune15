@@ -11,10 +11,9 @@ class ProjectsController < ApplicationController
       @projects = Project.all
     end
 
-    if request.xhr?
-      render @projects
-    else
-      render :index
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 
