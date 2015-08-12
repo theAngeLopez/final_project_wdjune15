@@ -1,7 +1,8 @@
-
-<h3><%= @project.name %></h3>
-<p><strong>City: </strong><%= @project.city %></p>
-<p><strong>Description: </strong><%= @project.description %></p>
-<div class="image_project">
-  <%= image_tag image_path(@project.image.url(:small))%>
-</div>
+<% @projects.each do |p| %>
+  <%= image_tag(image_path(p.image.url(:medium))) %>
+  <strong><p><%= link_to p.name, project_path(p) %>,
+  </p> </strong>
+  <%= p.tags.map(&:id) %>
+  <p><%= truncate(p.description, length: 100) %> </p>
+  <p><%= p.city %></p>
+<% end %>

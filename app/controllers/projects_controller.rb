@@ -2,9 +2,10 @@ class ProjectsController < ApplicationController
 
   def index
     @all_projects = Project.all
+
     if params[:tags]
       @projects = []
-      params[:tags].keys.each do |t|
+      params[:tags].each do |t|
         @projects = @projects.concat(Tag.find(t).projects)
       end
     else
