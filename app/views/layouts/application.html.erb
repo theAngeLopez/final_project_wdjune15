@@ -8,15 +8,12 @@
 
 </head>
 <body>
-    <div class="row">
-        <div class="large-3 columns">
+  <header>
+    <nav role='navigation'>
           <%= link_to root_url do %>
-          <h1><img src="http://i61.tinypic.com/2j5nx2f.png"/></h1>
+          <h1 id="logo"><img src="http://i61.tinypic.com/2j5nx2f.png"/></h1>
           <% end %>
-        </div>
-        <div class="nav">
-          <ul class="nav">
-
+          <ul>
         <% if current_user %>
           <li><%= link_to 'Survey', survey_url, class: "ajax-popup-link" %> </li>
           <li> <%= link_to "Recommended", suggested_projects_url %> </li>
@@ -32,8 +29,12 @@
           <li> <%= link_to "Login", login_path %> </li>
           <% end %>
         </ul>
-      </div>
 
+    </nav>
+    </header>
+<br>
+<br>
+<br>
   <%= link_to 'POPUP', "https://i.ytimg.com/vi/Bu-XjQNByl8/hqdefault.jpg", class: "ajax-popup-link"  %>
 
 <a href="#openModal">Take the Survey</a>

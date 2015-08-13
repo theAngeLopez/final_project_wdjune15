@@ -1,11 +1,23 @@
 <h1 id="user_name">
-  <%= "Hi #{@user.first_name} #{@user.last_name}" %>
+ <%=  "Hey, #{@user.first_name} #{@user.last_name}" %>
 </h1>
 <br>
 <br>
 <br>
+<div class="aboutme">
+ <h3>About me:</h3>
+ <table>
+   <tr>
+     <td>About</td>
+     <td><%= "#{@user.about_me}" %></td>
+   </tr>
+
+
+ </table>
+
+</div>
+<%= render 'user_stats' %>
+
 <h2>Projects List:</h2>
 
 <%= link_to 'Project Page', projects_path %>
-
-<%= render 'user_stats' %>

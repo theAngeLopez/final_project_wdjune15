@@ -1,44 +1,44 @@
 <%= form_for [@initiative, @project] do |f| %>
 
     <div class="field">
-      <%= f.label :name %> 
+      <%= f.label :name %>
       <%= f.text_field :name, :class => "form-control" %>
     </div>
 
     <div class="field">
-      <%= f.label :city %> 
+      <%= f.label :city %>
       <%= f.text_field :city, :class => "form-control" %>
     </div>
 
     <div class="field">
-      <%= f.label :description %> 
+      <%= f.label :description %>
       <%= f.text_area :description, :class => "form-control" %>
     </div>
 
     <div class="form-group">
       <%= f.label :image %> <br>
-      <%= f.file_field :image, :class => "form-control"  %> 
+      <%= f.file_field :image, :class => "form-control"  %>
     </div>
 
-    <div class="control-group">
-      <%= f.label :tag_id, :value => "Cause" %> <br>
-      <%= f.select(:tag_id, grouped_options_for_select(Tag.option_groups),{},{multiple: true}) %>
-    </div>
+   <div class="control-group">
+     <%= f.label :tag_ids, :value => "Cause" %> <br>
+     <%= f.select(:tag_ids, grouped_options_for_select(Tag.option_groups),{},{multiple: true}) %>
+   </div>
 
 <h4> Contact Information </h4>
 
     <div class="field">
-      <%= f.label :contact_name %> 
+      <%= f.label :contact_name %>
       <%= f.text_field :contact_name, :class => "form-control" %>
     </div>
 
     <div class="field">
-      <%= f.label :email %> 
+      <%= f.label :email %>
       <%= f.text_field :email, :class => "form-control" %>
     </div>
 
     <div class="field">
-      <%= f.label :phone_number %> 
+      <%= f.label :phone_number %>
       <%= f.text_field :phone_number, :class => "form-control" %>
     </div>
 

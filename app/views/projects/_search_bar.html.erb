@@ -2,7 +2,7 @@
 <div>
   <h4>Causes</h4>
 
-  <div>
+  <div id="search1">
     <% Tag.where(category: 'cause').all.each do |t| %>
       <%= label_tag t.name %>
       <%= check_box_tag t.id, t.id %>

@@ -37,17 +37,19 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new(project_params)
-    @project.initiative_id = params[:initiative_id]
-    if @project.save
-      redirect_to initiative_url(params[:initiative_id])
-    else
-      render :new
-    end
-  end
+   # Assign param tags to project
+   @project = Project.new(project_params)
+   @project.initiative_id = params[:initiative_id]
+   # @project.tags = (params[:tags])
 
-  private
-  def project_params
-    params.require(:project).permit(:name, :city, :description, :initiative_id, :image, :contact_name, :email, :phone_number, :tag_id)
-  end
-end
+   if @project.save
+     redirect_to initiative_url(params[:initiative_id])
+   else
+     render :new
+   end
+ end
+
+private
+ def project_params
+   params.require(:project).permit(:name, :city, :description, :initiative_id, :image, :contact_name, :email, :phone_number, :tag_ids => [])
+ end
