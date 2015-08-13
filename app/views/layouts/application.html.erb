@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+
 </head>
 <body>
     <div class="row">
@@ -17,6 +18,7 @@
           <ul class="nav">
 
         <% if current_user %>
+          <li><%= link_to 'Survey', survey_url, class: "ajax-popup-link" %> </li>
           <li> <%= link_to "Recommended", suggested_projects_url %> </li>
         <% end %>
           <li> <%= link_to "Explore", projects_url %> </li>
@@ -32,8 +34,19 @@
         </ul>
       </div>
 
+  <%= link_to 'POPUP', "https://i.ytimg.com/vi/Bu-XjQNByl8/hqdefault.jpg", class: "ajax-popup-link"  %>
 
+<a href="#openModal">Take the Survey</a>
+
+<div id="openModal" class="modalDialog">
   <div>
+  <a href="#close" title="Close" class="close">X</a>
+  <%= render '/survey_images/ask' %>
+  </div>
+</div>
+
+
+  </div>
     <p id="notice"><%= flash[:notice] %></p>
     <p id="alert"><%= flash[:alert] %></p>
   </div>
@@ -45,6 +58,7 @@
 <%= yield %>
 
 
+</div>
 
 </body>
 </html>

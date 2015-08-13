@@ -7,4 +7,5 @@
     <p><%= image_submit_tag(i.img_url) %></p>
   <% end %>
 <% end %>
-<%= link_to "View Profile", user_url(@user) %>
+
+<%= link_to "View Profile", user_url(current_user) %>

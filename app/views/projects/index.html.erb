@@ -1,5 +1,5 @@
-<!-- Header -->
 <section id="projectsbackground" class="container-fluid text-white">
+<<<<<<< HEAD
     <div class="container">
       <div class="row clearfix">
         <div class="col-md-6 column">
@@ -21,31 +21,23 @@
         </div>
       </div>
     </div><!-- /container  -->
+=======
+  <div class="container">
+    <h1 class="text-left">
+      <i id="logo" img class="fa fa-heartbeat"></i>
+    </h1>
+    <h1 class="main_title">Explore our projects.</h1>
+    <p class="text-left lead">
+      Based upon your interests and skills we connect you with like minded people!
+    </p>
+  </div>
+>>>>>>> fcbe411d22dec26b6ea41205abacc347d4280af5
 </section>
-<!-- end header -->
 
-<section>
-<%= render 'search_bar' %>
-</section>
-
-
-<div id="about" class="container text-blue">
-<div class="row clearfix">
-<div class="col-md-12 column p_title">
-<% @projects.each do |project| %>
-<div class="col-xs-6 col-md-3 column text-center">
-  <%= image_tag(image_path(project.image.url(:medium))) %>
-  <strong><p><%= link_to project.name, project_path(project) %>, </p> </strong>
-  <%= project.tags.map(&:id) %>
-  <p><%= truncate(project.description, length: 100) %> </p>
-  <p><%= project.city %></p>
-
-</div>
-<% end %>
-</div>
-</div>
+<div>
+  <%= render 'search_bar' %>
 </div>
 
-
-
-
+<div id="projects">
+  <%= render 'projectpartial' %>
+</div>
