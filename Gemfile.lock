@@ -40,9 +40,6 @@ GEM
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    bourbon (4.2.3)
-      sass (~> 3.4)
-      thor
     builder (3.2.2)
     byebug (5.0.0)
       columnize (= 0.9.0)
@@ -68,6 +65,9 @@ GEM
       i18n (~> 0.5)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
+    foundation-rails (5.5.2.1)
+      railties (>= 3.1.0)
+      sass (>= 3.3.0, < 3.5)
     globalid (0.3.5)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -189,11 +189,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bourbon
   byebug
   carrierwave
   coffee-rails (~> 4.1.0)
   faker (~> 1.4.3)
+  foundation-rails
   jbuilder (~> 2.0)
   jquery-rails
   less-rails

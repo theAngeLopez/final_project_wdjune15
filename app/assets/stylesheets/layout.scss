@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #dfe3ee;
+  font-size: 14px;
+  text-align: center;
+}
+
+.nav  {
+  list-style: none;
+  background-color: #8b9dc3;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+  width: auto;
+}
+
+.body {
+  font-family: 'Oswald', sans-serif;
+}
+
+.nav li {
+  font-family: 'Oswald', sans-serif;
+  border-bottom: 1px solid #888;
+  background-color: #8b9dc3;
+  width: 150px;
+  border-bottom: none;
+  height: 60px;
+  line-height: 50px;
+  font-size: 1.2em;
+  display: inline;
+  margin-right: -4px;
+  float: right;
+}
+
+.login1 {
+  border-bottom: 1px solid #efefef;
+  margin: 10px;
+  padding-bottom: 10px;
+  width: 260px;
+}
+
+.col-md-4 {
+  margin: auto;
+  width: 32%;
+  border:3px solid #8b9dc3;
+  padding: 10px;
+}
+
+.match {
+  border: 3px solid #8b9dc3;
+}
+
+#user_name {
+  font-family: 'Oswald', sans-serif;
+  float: left;
+}

@@ -7,14 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-  <div class="navbar-default navbar-fixed-top">
-    <div class="container">
-    <%= link_to root_url do %>
-     <img class="sambar-brand" src="http://i61.tinypic.com/4h4i9c.png"/>
-   <% end %>
-      <div class="collapse navbar-collapse navHeaderCollapse">
-        <ul class= "nav navbar-nav navbar-right">
+    <div class="row">
+        <div class="large-3 columns">
+          <%= link_to root_url do %>
+          <h1><img src="http://i61.tinypic.com/2j5nx2f.png"/></h1>
+          <% end %>
+        </div>
+        <div class="nav">
+          <ul class="nav">
 
         <% if current_user %>
           <li> <%= link_to "Recommended", suggested_projects_url %> </li>
@@ -31,8 +31,6 @@
           <% end %>
         </ul>
       </div>
-    </div>
-  </div>
 
 
   <div>
