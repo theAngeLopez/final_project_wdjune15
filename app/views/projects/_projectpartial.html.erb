@@ -1,8 +1,10 @@
 <% @projects.each do |p| %>
   <%= image_tag(image_path(p.image.url(:medium))) %>
-  <strong><p><%= link_to p.name, project_path(p) %>,
+  <ul>
+    <li><strong><p><%= link_to p.name, project_path(p) %>,
   </p> </strong>
   <%= p.tags.map(&:id) %>
   <p><%= truncate(p.description, length: 100) %> </p>
-  <p><%= p.city %></p>
+  <p><%= p.city %></p></li>
+  </ul>
 <% end %>
