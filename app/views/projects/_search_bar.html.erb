@@ -4,15 +4,15 @@
 
   <div id="search1">
     <% Tag.where(category: 'cause').all.each do |t| %>
-      <%= label_tag t.name %>
-      <%= check_box_tag t.id, t.id %>
+       <%= label_tag t.name %> <%= check_box_tag t.id, t.id %>
+      <br>
     <% end %>
 
   <h4>Contributions</h4>
 
   <% Tag.where(category: 'contribution').all.each do |t| %>
-    <%= label_tag t.name %>
-    <%= check_box_tag t.id, t.id %>
+    <%= label_tag t.name %> <%= check_box_tag t.id, t.id %>
+    <br>
   <% end %>
   </div>
 
