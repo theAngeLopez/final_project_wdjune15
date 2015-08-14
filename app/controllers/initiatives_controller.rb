@@ -1,12 +1,12 @@
 class InitiativesController < ApplicationController
-  
+
   def index
     @initiatives = Initiative.all
   end
 
   def show
     @initiative = Initiative.find(params[:id])
-    @project = Project.where("initiative_id = :ir", {ir: params[:id]})
+    @projects = Project.where("initiative_id = :ir", {ir: params[:id]})
   end
 
   def new

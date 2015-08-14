@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   authenticates_with_sorcery!
   has_many :interests
-  has_one :initiative
+  has_one :initiative, foreign_key: :owner_id
   has_many :projects, through: :initiatives
 
 
@@ -21,4 +21,5 @@ class User < ActiveRecord::Base
       0
     end
   end
+
 end
