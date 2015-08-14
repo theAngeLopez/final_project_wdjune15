@@ -1,0 +1,14 @@
+
+<section class="project-details">
+
+<% @projects.each do |p| %>
+<div class="title_block">
+<h1><%= p.name %></h1>
+</div>
+<p>Part of <%= p.initiative.name %> </p>
+
+<p>Located in: <%= p.city %></p>
+<p> <%= p.description %></p>
+<% end %>
+
+</section>
