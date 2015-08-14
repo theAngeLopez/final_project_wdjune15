@@ -1,23 +1,36 @@
-<h1 id="user_name">
- <%=  "Hey, #{@user.first_name} #{@user.last_name}" %>
-</h1>
-<br>
-<br>
-<br>
-<div class="aboutme">
- <h3>About me:</h3>
- <table>
-   <tr>
-     <td>About</td>
-     <td><%= "#{@user.about_me}" %></td>
-   </tr>
+  <h1 class="title_block" id="user_name">
+    <%=  "Hey, #{@user.first_name} #{@user.last_name}" %>
+  </h1>
 
+<br><br><br><br>
 
- </table>
+<div class="info_box">
+  <span class="aboutme">
+    <dl>
+      <dt>What's my deal:</dt>
+      <dd><%= "#{@user.about_me}" %></dd>
+      <br>
+      <dt>Reach out:</dt>
+      <dd><%= "#{@user.email}" %></dd>
+    </dl>
+  </span>
 
+  <div class="stats">
+    <h3>My Ripple stats</h3>
+  <%= render 'user_stats' %>
+  </div>
 </div>
-<%= render 'user_stats' %>
 
-<h2>Projects List:</h2>
+<div class="title_block">
+<h3>My Initiatives</h3>
+</div>
+<div class="my_init">
+<br>
+  <dl>
+    <dt><%= @owned.name %></dt>
+    <dd><%= @owned.description %></dd>
+  </dl>
+  <%= link_to "#{@owned.name} Projects", initiative_path(@owned) %>
+</div>
 
-<%= link_to 'Project Page', projects_path %>
+<br><br><br><br><br>

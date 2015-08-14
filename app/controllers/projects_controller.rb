@@ -53,3 +53,4 @@ private
  def project_params
    params.require(:project).permit(:name, :city, :description, :initiative_id, :image, :contact_name, :email, :phone_number, :tag_ids => [])
  end
+end

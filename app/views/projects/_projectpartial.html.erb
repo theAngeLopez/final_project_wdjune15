@@ -1,4 +1,4 @@
-<% @projects.each do |p| %>
+<% @project.each do |p| %>
   <%= image_tag(image_path(p.image.url(:medium))) %>
   <strong><p><%= link_to p.name, project_path(p) %>,
   </p> </strong>
