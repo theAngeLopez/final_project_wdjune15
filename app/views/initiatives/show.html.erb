@@ -1,21 +1,18 @@
 <h5>Initiative: </h5>
-<div class="title_block">
-<h1> <%= @initiative.name %> </h1>
-</div>
+  <div class="title_block">
+  <h1> <%= @initiative.name %> </h1>
+  </div>
 
-<div class="banner">
-  <%= image_tag image_path(@initiative.image.url(:banner))%>
-</div>
+  <div class="banner">
+    <%= image_tag image_path(@initiative.image.url(:banner))%>
+  </div>
 
-<div class="init_desc">
-<%= @initiative.description %>
-</div>
+  <div class="init_desc">
+  <%= @initiative.description %>
+  </div>
 
-<% @initiative.projects.each do |project| %>
-<div id="projects_show">
-   <%= render 'projectspartial', p: project %>
-</div>
-<% end %>
+  <% @projects = @initiative.projects %>
+  <%= render 'projectspartial' %>
 
 <br>
 

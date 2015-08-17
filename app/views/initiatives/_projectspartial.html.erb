@@ -1,11 +1,14 @@
-<div id="projects">
-  <%= image_tag(image_path(p.image.url(:medium))) %>
-
+<div id="init_projects">
   <ul>
-    <li><strong><p><%= link_to p.name, project_path(p) %>,
-  </p> </strong>
-
-  <p><%= truncate(p.description, length: 100) %> </p>
-  <p>Location: <%= p.city %></p></li>
+    <% @projects.each do |p| %>
+      <li>
+        <p><%= link_to p.name, project_path(p) %>
+        <%= image_tag(image_path(p.image.url(:medium))) %>
+        </p>
+        <%= p.tags.map(&:id) %>
+        <p><%= truncate(p.description, length: 40) %> </p>
+        <p><%= p.city %></p>
+      </li>
+    <% end %>
   </ul>
 </div>

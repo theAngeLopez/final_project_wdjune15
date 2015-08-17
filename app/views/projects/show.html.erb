@@ -1,6 +1,18 @@
-
-
 <%= render 'projectpartial' %>
+
+<h3>How to help:</h3>
+  <div class="contribution_icons">
+    <% project_tags = @project.tags %>
+      <% project_tags.each do |t| %>
+        <% if t.name == "monetary" %>
+          <button>Monetary</button>
+        <% elsif t.name == "volunteer" %>
+          <button>Volunteer</button>
+        <% elsif t.name == "service" %>
+          <button>Service</button>
+        <% end %>
+      <% end %>
+  </div>
 
 <% if current_user %>
   <button> <a href="mailto:<%= @project.email %>?
@@ -12,11 +24,14 @@
 
   %0D%0D
   Here's what I'm able to contribute to your project:
+  <%= current_user. %>
 
   %0D%0D
   Excited to hear from you soon,
   %0D
   <%= @user.first_name %>
   "><h4>CONTACT</h4></button>
+
 <!-- Add user contribution tag/options -->
 <% end %>
+

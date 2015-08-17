@@ -1,24 +1,25 @@
 <div class="row">
   <img src="http://i58.tinypic.com/2gvlq15.png"/>
 </div>
-      <h1 class="main_title">Explore our initiatives.</h1>
-          <p class="">
-            Discover how YOU can make a difference! Connect with passionate organizations and their amazing initiatives.
-          </p>
 
-        <div class="col-md-6 column">
-          <ul class="slides">
-          </ul>
-        </div>
+<h1 class="title_block">Explore our initiatives.</h1>
+  <p class="">
+    Discover how YOU can make a difference! Connect with passionate organizations and their amazing initiatives.
+  </p>
 
 
 <% if current_user  %>
     <%= link_to "New Initiative", "/initiatives/new" %> <br>
 <% end %>
 
-<% @initiatives.each do |initiative| %>
 <div class="initiative_box">
-<%=link_to initiative.name, initiative_path(initiative.id) %> <br>
-<%=link_to image_tag(image_path(initiative.image.url(:small))), "/initiatives/#{initiative.id}" %>
+  <ul>
+    <% @initiatives.each do |init| %>
+      <li>
+      <p><%=link_to image_tag(image_path(init.image.url(:small))), "/initiatives/#{init.id}" %></p>
+      <p><%=link_to init.name, initiative_path(init.id) %> </p>
+      <p><%= truncate(init.description, length: 40) %> </p>
+      </li>
+    <% end %>
+  </ul>
 </div>
-<% end %>

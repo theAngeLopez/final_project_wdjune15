@@ -205,17 +205,17 @@ div#projects {
 
 
 .initiative_box {
-  height: 50%;
-  width: 20%;
-  display: inline-block;
-  padding: 16px;
-  padding-bottom: 13px;
-  padding-top: 12px;
-  border-left: 2px solid #fff;
-  border-right: 2px solid #fff;
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  margin-bottom: 20px
+
+  ul {
+  @include block-grid(3);
+  }
+
+  li {
+    box-sizing: border-box;
+    border: 2px solid #b3b6bf;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 #footer {
@@ -230,6 +230,7 @@ div#projects {
   }
 
   li {
+    margin-top: 15px;
     display: inline-block;
     color: white;
     font-size: 14px;
@@ -340,4 +341,32 @@ div#search1 {
     padding-top: 20px;
     padding-bottom: 20px;
   }
+}
+
+#init_projects {
+
+  ul {
+  @include block-grid(3);
+  }
+
+  li {
+    box-sizing: border-box;
+    border: 2px solid #b3b6bf;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+#new_user {
+  width: 55%;
+  text-align: center;
+  display: inline-block;
+  padding-top: 25px;
+}
+
+#login_form {
+  width: 45%;
+  text-align: center;
+  display: inline-block;
+  padding-top: 25px;
 }

@@ -1,37 +1,17 @@
-<div class="container">
-  
-  <div class="row" id="pwd-container">
-    <div class="col-md-4"></div>
-    
-    <div class="col-md-4">
-      <section class="login1">
-        <div class = "login1">
-          <img src="http://i59.tinypic.com/32zufbm.png" class="img-responsive" alt="" />
-          <%= form_tag user_sessions_path, :method => :post do %>
-                <div class="field">
-                      <%= label_tag :email %><br />
-                      <%= text_field_tag :email %>
-                    </div>
-                    <div class="field">
-                      <%= label_tag :password %><br />
-                      <%= password_field_tag :password %>
-                    </div>
-                    
-                  <div class="actions">
-                  <%= submit_tag "Login", :class => "btn btn-default" %>
-                  </div>
-            <% end %>          
-       
-        
-      </section>  
-      </div>
-      
-      <div class="col-md-4"></div>
-      
+<div id="login_form">
+  <%= form_tag user_sessions_path, :method => :post do %>
+    <div class="field">
+      <%= label_tag :email %><br />
+      <%= text_field_tag :email %>
+    </div>
 
-  </div>
-  
-     
-  
-  
+    <div class="field">
+      <%= label_tag :password %><br />
+      <%= password_field_tag :password %>
+    </div>
+
+    <div class="actions">
+    <%= button_tag "Login" %>
+    </div>
+  <% end %>
 </div>
