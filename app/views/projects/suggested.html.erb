@@ -1,9 +1,9 @@
-
+<div id="suggested">
 <% @projects.each do |p| %>
 <h3><%= p.name %></h3>
 <p><strong>City: </strong><%= p.city %></p>
 <p><strong>Description: </strong><%= p.description %></p>
 <div class="image_project">
   <%= image_tag image_path(p.image.url(:medium))%>
-</div>
 <% end %>
+</div>
