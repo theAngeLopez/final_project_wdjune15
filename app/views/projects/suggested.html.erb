@@ -1,24 +1,20 @@
-<div id="suggested">
-<% @projects.each do |p| %>
-<h3><%= link_to p.name, project_url(p) %></h3>
-<p><%= p.tag_ids.each do |t| %> </p>
-<%= print "#{t}" %>
-<% end %>
-<p><strong>City: </strong><%= p.city %></p>
-<p><strong>Description: </strong><%= p.description %></p>
-<div class="image_project">
-  <%= image_tag image_path(p.image.url(:medium))%>
+<h1 class="title_block">Your recommended projects</h1>
 
-<% end %>
+<div id="suggested">
+<ul>
+  <% @projects.each do |p| %>
+  <li>
+  <div class="image_project">
+      <%= image_tag image_path(p.image.url(:medium))%>
+      <h3><%= link_to p.name, project_url(p) %></h3>
+
+      <!-- Just to see the tag -->
+      <%= p.tags.map(&:id) %>
+
+      <p><strong>City: </strong><%= p.city %></p>
+      <p><strong>Description: </strong><%= truncate(p.description, length: 30) %></p>
+  </li>
+  <% end %>
+</ul>
 </div>
 
-<% @projects.each do |p| %>
-  <%= image_tag(image_path(p.image.url(:medium))) %>
-  <ul>
-    <li><strong><p><%= link_to p.name, project_path(p) %>,
-  </p> </strong>
-  <%= p.tags.map(&:id) %>
-  <p><%= truncate(p.description, length: 100) %> </p>
-  <p><%= p.city %></p></li>
-  </ul>
-<% end %>

@@ -1,21 +1,30 @@
 <%= form_tag projects_path , method: :get, id: "search-form" do %>
 <div>
-  <h4>Causes</h4>
-
+  <ul>
   <div class="searchie">
-    <% Tag.where(category: 'cause').all.each do |t| %>
-       <%= label_tag t.name %> <%= check_box_tag t.id, t.id %>
-      <br>
-    <% end %>
+    <div class="cause_options">
+      <h4>Causes</h4>
+      <% Tag.where(category: 'cause').all.each do |t| %>
+         <li>
+           <%= label_tag t.name %>
+           <%= check_box_tag t.id, t.id %>
+         </li>
+      <% end %>
+    </div>
 
-  <h4>Contributions</h4>
-
-  <% Tag.where(category: 'contribution').all.each do |t| %>
-    <%= label_tag t.name %> <%= check_box_tag t.id, t.id %>
-    <br>
-  <% end %>
+    <div class="contribution_options">
+      <h4>Contributions</h4>
+      <% Tag.where(category: 'contribution').all.each do |t| %>
+        <li>
+          <%= label_tag t.name %>
+          <%= check_box_tag t.id, t.id %>
+        </li>
+      <% end %>
+    </div>
   </div>
+  </ul>
 
-  <%= submit_tag "Search" %>
+  <%= button_tag "Search" %>
+
 <% end %>
 </div>
