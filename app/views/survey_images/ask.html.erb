@@ -1,12 +1,20 @@
+<div class="title_block">
 <h1>Select one of the images below:</h1>
+</div>
 
+<div class="survey_image">
+<%  n = 1  %>
 <% @images.each do |i| %>
   <%= form_for [@user, @interest], url: survey_path, method: :get do |f| %>
     <%= f.hidden_field :tag_id, :value => i.tag_id %>
     <%= f.hidden_field :score, :value => i.score %>
-    <p><%= image_submit_tag(i.img_url) %></p>
+    <p><%= image_submit_tag(i.img_url, :class => "pic_#{n}")%></p>
+    <% n += 1  %>
   <% end %>
 <% end %>
+</div>
 
 <!-- IF USER SIGNED IN -->
+<button class="profile_button">
 <%= link_to "View Profile", user_url(current_user) %>
+</button>

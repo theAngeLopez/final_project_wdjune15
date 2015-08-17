@@ -11,10 +11,10 @@
   <header>
     <nav role='navigation'>
           <%= link_to root_url do %>
-          <h1 id="logo"><img src="http://i61.tinypic.com/2j5nx2f.png"/></h1>
+          <div id="logo"><img src="http://i59.tinypic.com/35laljn.png"/></div>
           <% end %>
           <ul>
-          <li><a href="#openModal">Take the Survey</a></li>
+
         <% if current_user %>
           <li><%= link_to 'Survey', survey_url, class: "ajax-popup-link" %> </li>
           <li> <%= link_to "Recommended", suggested_projects_url %> </li>
@@ -28,21 +28,10 @@
           <% else %>
           <li>  <%= link_to "Register", new_user_path %> </li>
           <li> <%= link_to "Login", login_path %> </li>
-
           <% end %>
         </ul>
-
     </nav>
     </header>
-
-
-<div id="openModal" class="modalDialog">
-  <div>
-  <a href="#close" title="Close" class="close">X</a>
-
-  </div>
-</div>
-
 
 <%= yield %>
 
