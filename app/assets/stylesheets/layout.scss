@@ -7,7 +7,7 @@ html {
 body {
   position: relative;
   margin-bottom: 50px;
-  background: #dfe3ee;
+  background-image:url('ticks.png');
   min-height: 100%;
   font-size: 14px;
   text-align: center;
@@ -27,7 +27,7 @@ nav {
   height: 6em;
   position: fixed;
   width: 100%;
-  border-bottom: 2px solid #706e6f;
+  border-bottom: 2px solid #00536E;
   z-index: 1000;
 
   #logo {
@@ -166,25 +166,27 @@ nav {
 
 #searchbar {
   width:100%;
-  background-color: #fffbf8;
   box-sizing:border-box;
   padding-bottom: 100px;
 
   .cause_options, .contribution_options {
+    background-color: #fffbf8;
     width: 45%;
     display: inline-block;
-    border: 2px solid black;
+    border-radius: 10px;
+    border: 2px solid #fffbf8;
     padding: 5px;
     margin: 10px;
   }
 
   .cause_options {
     float: left;
+    margin-left: 10px;
   }
 
   .contribution_options {
     float: right;
-    margin-right: 25px;
+    margin-right: 35px;
   }
 
   .searchie {
@@ -200,8 +202,18 @@ nav {
       margin-top: 13px;
     }
   }
+
+  .search_button {
+    margin-top: 10px;
+    width: 50%;
+  }
 }
 
+.box_effect {
+  -webkit-box-shadow: 0 10px 6px -6px rgba(10,10,10,0.5);
+     -moz-box-shadow: 0 10px 6px -6px rgba(10,10,10,0.5);
+          box-shadow: 0 10px 6px -6px rgba(10,10,10,0.5);
+}
 
 .row {
   height: 100%;
@@ -210,6 +222,7 @@ nav {
   max-height: 1500px;
   min-width: 100%;
   min-height: 100%;
+  margin-bottom: -10px;
 }
 
 div#projects {
@@ -227,7 +240,6 @@ div#projects {
 
 
 .initiative_box {
-  border-radius: 5px;
 
   ul {
   @include block-grid(3);
@@ -235,7 +247,6 @@ div#projects {
 
   li {
     box-sizing: border-box;
-    border: 2px solid #b3b6bf;
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -297,7 +308,7 @@ div#projects {
 }
 
 .title_block {
-  background-color: #b3b6bf;
+  position: static;
   width: 100%;
   padding: 25px;
 }

@@ -9,7 +9,8 @@
 
 
 <% if current_user  %>
-  <%= link_to "New Initiative", new_initiative_path %> <br>
+  <button><%= link_to " + New Initiative", new_initiative_path, class: "profile_button" %> <br>
+  </button>
 <% end %>
 
 <div class="initiative_box">

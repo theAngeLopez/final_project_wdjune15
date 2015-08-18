@@ -2,7 +2,7 @@
 <div>
   <ul>
   <div class="searchie">
-    <div class="cause_options">
+    <div class="cause_options box_effect">
       <h4>Causes</h4>
       <% Tag.where(category: 'cause').all.each do |t| %>
          <li>
@@ -12,7 +12,7 @@
       <% end %>
     </div>
 
-    <div class="contribution_options">
+    <div class="contribution_options box_effect">
       <h4>Contributions</h4>
       <% Tag.where(category: 'contribution').all.each do |t| %>
         <li>
@@ -24,7 +24,7 @@
   </div>
   </ul>
 
-  <%= button_tag "Search" %>
+  <%= button_tag "Search", class: "search_button" %>
 
 <% end %>
 </div>

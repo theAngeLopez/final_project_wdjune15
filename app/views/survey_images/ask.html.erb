@@ -15,6 +15,6 @@
 </div>
 
 <!-- IF USER SIGNED IN -->
-<button class="profile_button">
-<%= link_to "View Profile", user_url(current_user) %>
+<button>
+<%= link_to "View Profile", user_url(current_user), class: "profile_button" %>
 </button>

@@ -78,7 +78,7 @@ p = Project.create!(
   :contact_name => sam.full_name,
   :email => Faker::Internet.email,
   :phone_number => Faker::PhoneNumber.phone_number,
-  :image => ""
+  :image => "http://i61.tinypic.com/wcc043.png"
   )
   p.tags << home
   p.tags << volunteer
@@ -92,7 +92,7 @@ p = Project.create!(
   :contact_name => sam.full_name,
   :email => Faker::Internet.email,
   :phone_number => Faker::PhoneNumber.phone_number,
-  :image => ""
+  :image => "http://i57.tinypic.com/16m7xmq.png"
   )
   p.tags << home
   p.tags << monetary
@@ -105,7 +105,7 @@ p = Project.create!(
   :contact_name => sam.full_name,
   :email => Faker::Internet.email,
   :phone_number => Faker::PhoneNumber.phone_number,
-  :image => ""
+  :image => "http://i59.tinypic.com/2nvcmew.png"
   )
   p.tags << home
   p.tags << volunteer
@@ -121,7 +121,7 @@ p = Project.create!(
   :contact_name => user.full_name,
   :email => Faker::Internet.email,
   :phone_number => Faker::PhoneNumber.phone_number,
-  :image => ""
+  :image => "http://i62.tinypic.com/55mjq8.png"
   )
   p.tags << water
   p.tags << monetary
@@ -136,7 +136,7 @@ p = Project.create!(
   :contact_name => user.full_name,
   :email => Faker::Internet.email,
   :phone_number => Faker::PhoneNumber.phone_number,
-  :image => ""
+  :image => "http://i57.tinypic.com/11ijqtx.png"
   )
   p.tags << water
   p.tags << monetary
@@ -149,7 +149,7 @@ p = Project.create!(
   :contact_name => user.full_name,
   :email => Faker::Internet.email,
   :phone_number => Faker::PhoneNumber.phone_number,
-  :image => ""
+  :image => "http://i57.tinypic.com/jj5xtx.png"
   )
   p.tags << water
   p.tags << volunteer
@@ -163,7 +163,7 @@ p = Project.create!(
   :contact_name => user.full_name,
   :email => Faker::Internet.email,
   :phone_number => Faker::PhoneNumber.phone_number,
-  :image => ""
+  :image => "http://i59.tinypic.com/2hces6a.png"
   )
   p.tags << water
   p.tags << volunteer
@@ -179,7 +179,7 @@ p = Project.create!(
   :contact_name => eug.full_name,
   :email => Faker::Internet.email,
   :phone_number => Faker::PhoneNumber.phone_number,
-  :image => ""
+  :image => "http://i61.tinypic.com/o5e2jd.png"
   )
   p.tags << edu
   p.tags << monetary
@@ -196,7 +196,7 @@ p = Project.create!(
   :contact_name => user.full_name,
   :email => Faker::Internet.email,
   :phone_number => Faker::PhoneNumber.phone_number,
-  :image => ""
+  :image => "http://i58.tinypic.com/sc9d2s.png"
   )
   p.tags << env
   p.tags << volunteer
@@ -210,7 +210,7 @@ p = Project.create!(
   :contact_name => user.full_name,
   :email => Faker::Internet.email,
   :phone_number => Faker::PhoneNumber.phone_number,
-  :image => ""
+  :image => "http://i62.tinypic.com/907znd.png"
   )
   p.tags << env
   p.tags << monetary
@@ -225,7 +225,7 @@ p = Project.create!(
   :contact_name => user.full_name,
   :email => Faker::Internet.email,
   :phone_number => Faker::PhoneNumber.phone_number,
-  :image => ""
+  :image => "http://i57.tinypic.com/2dt2880.png"
   )
   p.tags << env
   p.tags << volunteer
@@ -238,7 +238,7 @@ p = Project.create!(
   :contact_name => user.full_name,
   :email => Faker::Internet.email,
   :phone_number => Faker::PhoneNumber.phone_number,
-  :image => ""
+  :image => "http://i57.tinypic.com/25i0sp5.png"
   )
   p.tags << env
   p.tags << monetary
