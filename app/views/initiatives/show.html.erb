@@ -4,7 +4,10 @@
   </div>
 
   <div class="banner">
-    <%= image_tag image_path(@initiative.image.url(:banner))%>
+        <p class="icon_box">
+          <%= link_to initiative_path(@initiative) do  %>
+            <%= image_tag(@initiative.image, height: "225", width: "225", class: "icon") %>
+          <% end %>
   </div>
 
   <div class="init_desc">

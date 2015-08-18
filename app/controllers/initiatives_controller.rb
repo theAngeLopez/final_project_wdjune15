@@ -25,6 +25,6 @@ class InitiativesController < ApplicationController
 
   private
   def initiative_params
-    params.require(:initiative).permit(:name, :description, :image)
+    params.require(:initiative).permit(:name, :description, :image, :owner_id)
   end
 end

@@ -30,9 +30,9 @@ nav {
   border-bottom: 2px solid #706e6f;
   z-index: 1000;
 
-  .logo {
+  #logo {
     float: left;
-    height: 5em;
+    height: 6em;
   }
 
   ul {
@@ -45,6 +45,28 @@ nav {
     padding: 15px;
     margin-top: 13px;
   }
+}
+
+.nav_link {
+  color: #FFFFFF;
+}
+
+.icon_box {
+  width: 100%;
+}
+
+.icon {
+  border-radius: 50%;
+  width: 100%;
+  padding: 20px 60px;
+}
+
+.name_me {
+
+}
+
+.desc_me {
+
 }
 
 #content  {
@@ -205,6 +227,7 @@ div#projects {
 
 
 .initiative_box {
+  border-radius: 5px;
 
   ul {
   @include block-grid(3);
@@ -355,6 +378,10 @@ div#search1 {
     padding-top: 20px;
     padding-bottom: 20px;
   }
+}
+
+a img .icon {
+  height: 100%;
 }
 
 #new_user {
