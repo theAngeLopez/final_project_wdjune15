@@ -1,6 +1,6 @@
-  <div class="row">
+<!--   <div class="row">
     <img src="http://i58.tinypic.com/33okykk.png">
-  </div>
+  </div> -->
 
 
   <h1 class="title_block" id="user_name">
@@ -27,18 +27,18 @@
 </div>
 
 
-<% if current_user && @owned == true %>
-<div class="title_block">
-<h3>My Initiatives</h3>
-</div>
-<div class="my_init">
-<br>
-  <dl>
-    <dt><%= @owned.name %></dt>
-    <dd><%= @owned.description %></dd>
-  </dl>
-  <%= link_to "#{@owned.name} Projects", initiative_path(@owned) %>
-</div>
+<% if @owned %>
+  <div class="title_block">
+  <h2 class="my_init">My Initiatives</h2>
+  </div>
+  <div class="my_init_info">
+  <br>
+    <dl>
+      <dt><%= @owned.name %></dt>
+      <dd><%= @owned.description %></dd>
+    </dl>
+    <button><%= link_to "#{@owned.name} Projects", initiative_path(@owned), class: "profile_button" %></button>
+  </div>
 <% end %>
 
 <br><br><br><br><br>

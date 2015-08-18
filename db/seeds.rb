@@ -33,21 +33,21 @@ service = Tag.create(name: "service",     category: "contribution")
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Survey Images  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-SurveyImage.create(img_url:"ENV1_500.jpg", tag_id: env.id, score: 5)
-SurveyImage.create(img_url:"ENV2_500.jpg", tag_id: env.id, score: 5)
-SurveyImage.create(img_url:"ENV3_500.jpg", tag_id: env.id, score: 5)
+SurveyImage.create(img_url:"ENV1_500.png", tag_id: env.id, score: 5)
+SurveyImage.create(img_url:"ENV2_500.png", tag_id: env.id, score: 5)
+SurveyImage.create(img_url:"ENV3_500.png", tag_id: env.id, score: 5)
 
-SurveyImage.create(img_url:"HOME1_500.jpg", tag_id: home.id, score: 5)
-SurveyImage.create(img_url:"HOME2_500.jpg", tag_id: home.id, score: 5)
-SurveyImage.create(img_url:"HOME3_500.jpg", tag_id: home.id, score: 5)
+SurveyImage.create(img_url:"HOME1_500.png", tag_id: home.id, score: 5)
+SurveyImage.create(img_url:"HOME2_500.png", tag_id: home.id, score: 5)
+SurveyImage.create(img_url:"HOME3_500.png", tag_id: home.id, score: 5)
 
-SurveyImage.create(img_url:"WATER1_500.jpg", tag_id: water.id, score: 5)
-SurveyImage.create(img_url:"WATER2_500.jpg", tag_id: water.id, score: 5)
-SurveyImage.create(img_url:"WATER3_500.jpg", tag_id: water.id, score: 5)
+SurveyImage.create(img_url:"WATER1_500.png", tag_id: water.id, score: 5)
+SurveyImage.create(img_url:"WATER2_500.png", tag_id: water.id, score: 5)
+SurveyImage.create(img_url:"WATER3_500.png", tag_id: water.id, score: 5)
 
-SurveyImage.create(img_url:"EDU1_500.jpg", tag_id: edu.id, score: 5)
-SurveyImage.create(img_url:"EDU2_500.jpg", tag_id: edu.id, score: 5)
-SurveyImage.create(img_url:"EDU3_500.jpg", tag_id: edu.id, score: 5)
+SurveyImage.create(img_url:"EDU1_500.png", tag_id: edu.id, score: 5)
+SurveyImage.create(img_url:"EDU2_500.png", tag_id: edu.id, score: 5)
+SurveyImage.create(img_url:"EDU3_500.png", tag_id: edu.id, score: 5)
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Initiatives  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 

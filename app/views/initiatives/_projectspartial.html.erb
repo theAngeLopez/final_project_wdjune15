@@ -1,14 +1,16 @@
-<div id="init_projects">
+<div class="initiative_box">
   <ul>
-    <% @projects.each do |p| %>
-      <li>
-        <p><%= link_to p.name, project_path(p) %>
-        <%= image_tag(image_path(p.image.url(:medium))) %>
-        </p>
-        <%= p.tags.map(&:id) %>
-        <p><%= truncate(p.description, length: 40) %> </p>
-        <p><%= p.city %></p>
-      </li>
-    <% end %>
+  <% @projects.each do |p| %>
+    <li>
+      <p class="icon_box">
+        <%= link_to project_path(p) do  %>
+          <%= image_tag(p.image, height: "225", width: "225", class: "icon") %>
+        <% end %>
+      </p>
+      <p class="name_me"><%= link_to p.name, project_path(p) %></p
+      <p class="desc_me"><%= truncate(p.description, length: 100) %> </p>
+      <p>Location: <%= p.city %></p>
+    </li>
+  <% end %>
   </ul>
 </div>

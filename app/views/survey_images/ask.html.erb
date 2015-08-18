@@ -1,5 +1,5 @@
 <div class="title_block">
-<h1>Select one of the images below:</h1>
+<h2>Which image resonates with you?</h2>
 </div>
 
 <div class="survey_image">
@@ -16,5 +16,8 @@
 
 <!-- IF USER SIGNED IN -->
 <button>
-<%= link_to "View Profile", user_url(current_user), class: "profile_button" %>
+  <%= link_to "Neither", survey_url, class: "profile_button" %>
+</button>
+<button>
+  <%= link_to "View Profile", user_url(current_user), class: "profile_button" %>
 </button>

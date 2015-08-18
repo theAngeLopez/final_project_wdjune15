@@ -2,7 +2,7 @@
   <img src="http://i58.tinypic.com/2gvlq15.png"/>
 </div>
 
-<h1 class="title_block">Explore our initiatives.</h1>
+<h1 class="title_block">Explore Initiatives</h1>
   <p class="">
     Discover how YOU can make a difference! Connect with passionate organizations and their amazing initiatives.
   </p>
@@ -24,7 +24,7 @@
         </p>
         <br>
         <p class="name_me"><%=link_to init.name, initiative_path(init.id) %> </p>
-        <p class="desc_me"><%= truncate(init.description, length: 40) %> </p>
+        <p class="desc_me"><%= truncate(init.description, length: 100) %> </p>
       </li>
     <% end %>
   </ul>

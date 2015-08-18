@@ -62,11 +62,13 @@ nav {
 }
 
 .name_me {
-
+  size: 1.5em;
+  font-weight: bold;
 }
 
 .desc_me {
-
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 #content  {
@@ -80,7 +82,9 @@ nav {
 }
 
 #description {
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
 }
 
 .login1 {
@@ -167,7 +171,7 @@ nav {
 #searchbar {
   width:100%;
   box-sizing:border-box;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
 
   .cause_options, .contribution_options {
     background-color: #fffbf8;
@@ -232,7 +236,6 @@ div#projects {
 
   li {
     box-sizing: border-box;
-    border: 2px solid #b3b6bf;
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -240,6 +243,7 @@ div#projects {
 
 
 .initiative_box {
+  overflow: hidden;
 
   ul {
   @include block-grid(3);
@@ -308,9 +312,14 @@ div#projects {
 }
 
 .title_block {
+  background-color: rgba(0, 106, 141, 0.50);
   position: static;
   width: 100%;
-  padding: 25px;
+  padding: 20px;
+
+  .my_init {
+    text-align: left
+  }
 }
 
 .my_init {
@@ -339,8 +348,8 @@ div#projects {
 }
 
 .survey_image {
-  margin-top: 5%;
-  height: 75%;
+  margin-top: -20px;
+  height: 30%;
   display: inline-block;
   width: 100%;
 }
@@ -352,6 +361,7 @@ div#projects {
   margin-left: auto;
   margin-right: auto;
   padding: 2%;
+  border-radius: 75px;
 }
 
 .profile_button {
@@ -378,7 +388,6 @@ div#search1 {
 }
 
 #init_projects {
-
   ul {
   @include block-grid(3);
   }

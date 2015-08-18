@@ -1,6 +1,4 @@
 class Project < ActiveRecord::Base
-   	mount_uploader :image, ImageUploader
-
     belongs_to :initiative
     has_and_belongs_to_many :tags
     has_many :interests, through: :tags

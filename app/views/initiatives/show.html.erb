@@ -1,14 +1,12 @@
-<h5>Initiative: </h5>
-  <div class="title_block">
+<div class="title_block">
   <h1> <%= @initiative.name %> </h1>
-  </div>
+</div>
 
-  <div class="banner">
-        <p class="icon_box">
-          <%= link_to initiative_path(@initiative) do  %>
-            <%= image_tag(@initiative.image, height: "225", width: "225", class: "icon") %>
-          <% end %>
-  </div>
+<div class="initiative_box">
+  <p class="icon_box">
+      <%= image_tag(@initiative.image, height: "225", width: "225", class: "icon") %>
+  </p>
+</div>
 
   <div class="init_desc">
   <%= @initiative.description %>
@@ -20,5 +18,6 @@
 <br>
 
 <% if current_user && @initiative.owner_id == current_user.id %>
-    <%= link_to('New Project' , new_initiative_project_path(@initiative)) %>
+    <button> <%= link_to 'New Project', new_initiative_project_path(@initiative), class: "nav_link" %></button>
 <% end %>
+
