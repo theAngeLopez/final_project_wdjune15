@@ -2,12 +2,19 @@
 <section class="project-details">
 
 <% p = @project %>
+
 <div class="title_block">
-<h1><%= p.name %></h1>
+  <h1><%= p.name %></h1>
 </div>
-<p>Part of <%= p.initiative.name %> </p>
 
-<p>Located in: <%= p.city %></p>
-<p> <%= p.description %></p>
+<div class="initiative_box2">
+  <p class="icon_box">
+      <%= image_tag(p.image, height: "500", width: "500", class: "icon") %>
+    <span class="init_desc">
+    <%= p.description %>
+    </span>
+  </p>
+</div>
 
+<p>Location: <%= p.city %></p>
 </section>

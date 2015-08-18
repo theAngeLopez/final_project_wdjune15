@@ -2,16 +2,18 @@
   <h1> <%= @initiative.name %> </h1>
 </div>
 
-<div class="initiative_box">
+<div class="initiative_box2">
+
   <p class="icon_box">
-      <%= image_tag(@initiative.image, height: "225", width: "225", class: "icon") %>
+      <%= image_tag(@initiative.image, height: "500", width: "500", class: "icon") %>
+    <span class="init_desc">
+    <%= @initiative.description %>
+    </span>
   </p>
+
 </div>
 
-  <div class="init_desc">
-  <%= @initiative.description %>
-  </div>
-
+<hr>
   <% @projects = @initiative.projects %>
   <%= render 'projectspartial' %>
 

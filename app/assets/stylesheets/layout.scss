@@ -51,9 +51,6 @@ nav {
   color: #FFFFFF;
 }
 
-.icon_box {
-  width: 100%;
-}
 
 .icon {
   border-radius: 50%;
@@ -254,6 +251,36 @@ div#projects {
     padding-top: 20px;
     padding-bottom: 20px;
   }
+}
+
+.initiative_box2 {
+  overflow: hidden;
+
+  .icon_box {
+    text-align: left;
+  }
+
+  .icon {
+    border-radius: 50%;
+    width: 40%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 60px;
+    margin-left: 75px;
+  }
+
+  .init_desc {
+    width: 45%;
+    float: right;
+    font-size: 1.5em;
+    padding-top: 5%;
+    padding-left: 10%;
+    margin-right: 60px;
+  }
+}
+
+hr {
+  border-color: #00536e;
 }
 
 #footer {

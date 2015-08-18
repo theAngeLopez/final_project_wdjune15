@@ -15,7 +15,7 @@
   </div>
 
 <% if current_user %>
-  <button> <a href="mailto:<%= @project.email %>?
+  <button> <a class="nav_link" href="mailto:<%= @project.email %>?
   subject=I want to join your <%= @project.name %> project!
   &body=
   Hey, my name is <%= @user.first_name %> and I'd like to help out with your project.
@@ -27,7 +27,7 @@
   Excited to hear from you soon,
   %0D
   <%= @user.first_name %>
-  "><h4>CONTACT</h4></button>
+  " ><h4>CONTACT</h4></button>
 
 <!-- Add user contribution tag/options -->
 <% end %>
